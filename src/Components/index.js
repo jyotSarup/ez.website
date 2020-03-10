@@ -5,10 +5,10 @@ import PersistentDrawerRight from './Layout/drawer';
 
 //pages
 import HomePage from './Pages/HomePage';
-import Services from './Pages/services';
+import Services from './Pages/Services/services';
 import Pricing from './Pages/Pricing/pricing';
-import Team from './Pages/team';
-import Contact from './Pages/contact';
+import Team from './Pages/Team/team';
+import Contact from './Pages/Contact/contact';
 
 export {
     PersistentDrawerRight, HeaderBar, Footer, HomePage, Services, Pricing, Team, Contact
