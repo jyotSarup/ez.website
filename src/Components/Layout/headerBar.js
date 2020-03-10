@@ -21,6 +21,9 @@ const useStyles = makeStyles(theme => ({
   },
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+  },
   },
   toolbar: {
     flexWrap: 'wrap',

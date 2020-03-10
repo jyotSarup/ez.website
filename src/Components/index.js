@@ -1,6 +1,7 @@
 //layout
 import Footer from './Layout/footer';
 import HeaderBar from './Layout/headerBar';
+import PersistentDrawerRight from './Layout/drawer';
 
 //pages
 import HomePage from './Pages/HomePage';
@@ -10,5 +11,5 @@ import Team from './Pages/team';
 import Contact from './Pages/contact';
 
 export {
-    HeaderBar, Footer, HomePage, Services, Pricing, Team, Contact
+    PersistentDrawerRight, HeaderBar, Footer, HomePage, Services, Pricing, Team, Contact
 }

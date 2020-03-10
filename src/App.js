@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 //components
-import { HeaderBar, Footer, HomePage, Services, Pricing, Team, Contact } from './Components'
+import { PersistentDrawerRight, HeaderBar, Footer, HomePage, Services, Pricing, Team, Contact } from './Components'
 
 //styling
 import { ThemeProvider } from '@material-ui/styles';
@@ -20,8 +20,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <div className="App">
+      
 
-          
+          <PersistentDrawerRight />
+  
           <HeaderBar />
 
           <Route exact path='/' component={HomePage} />
