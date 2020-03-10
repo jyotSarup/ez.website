@@ -126,11 +126,11 @@ export default function Pricing() {
         </div>
 
         <div className="wrapPricing">
-          <Container maxWidth="md" component="main">
-            <Grid container spacing={5} alignItems="flex-end">
+          <Container maxWidth="xl" component="main">
+            <Grid container spacing={3} alignItems="center">
               {tiers.map(tier => (
                 // Enterprise card is full width at sm breakpoint
-                <Grid item key={tier.title} xs={12} sm={tier.title === 'Custom' ? 12 : 6} md={3}>
+                <Grid item key={tier.title} xs={12} sm={12} md={6} lg={3} xl={3}>
                   <Card>
                     <CardHeader
                       title={tier.title}
