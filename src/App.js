@@ -7,12 +7,12 @@ import {
 } from 'react-router-dom';
 
 //components
-import { CenteredTabs, Footer, HomePage, Services, Pricing, Team, Contact } from './Components'
+import { HeaderBar, Footer, HomePage, Services, Pricing, Team, Contact } from './Components'
 
 //styling
 import { ThemeProvider } from '@material-ui/styles';
 import theme from './Components/theme';
-import './Assets/styles.css';
+import './Assets/sass/styles.css';
 
 
 function App() {
@@ -21,7 +21,8 @@ function App() {
       <Router>
         <div className="App">
 
-          <CenteredTabs />
+          
+          <HeaderBar />
 
           <Route exact path='/' component={HomePage} />
           <Route exact path='/Services' component={Services} />

@@ -1,14 +1,14 @@
 //layout
-import CenteredTabs from './Layout/centeredTabs';
 import Footer from './Layout/footer';
+import HeaderBar from './Layout/headerBar';
 
 //pages
 import HomePage from './Pages/HomePage';
 import Services from './Pages/services';
-import Pricing from './Pages/pricing';
+import Pricing from './Pages/Pricing/pricing';
 import Team from './Pages/team';
 import Contact from './Pages/contact';
 
 export {
-    CenteredTabs, Footer, HomePage, Services, Pricing, Team, Contact
+    HeaderBar, Footer, HomePage, Services, Pricing, Team, Contact
 }
