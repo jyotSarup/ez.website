@@ -12,7 +12,8 @@ import { PersistentDrawerRight, HeaderBar, Footer, HomePage, Services, Pricing, 
 //styling
 import { ThemeProvider } from '@material-ui/styles';
 import theme from './Components/theme';
-import './Assets/sass/styles.css';
+//import './Assets/sass/styles.css';
+import './Assets/sass/styles.scss';
 
 
 function App() {
