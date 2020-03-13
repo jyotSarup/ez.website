@@ -1,12 +1,13 @@
 import React from 'react';
-//import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+
 
 function Contact() {
     return (
         <div className="wrapContact">
-            
-           <h1>Contact Us</h1>
-           
+            <Typography variant="h2" className="contact_heading">
+          CONTACT US
+            </Typography>           
         </div>
     );
 }
