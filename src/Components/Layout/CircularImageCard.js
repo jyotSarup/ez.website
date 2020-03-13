@@ -9,8 +9,8 @@ import Grid from "@material-ui/core/Grid";
 class CircularImageCard extends React.Component {
   render() {
     return (
-      <Grid item sm={4} >
-        <Card style={{ height: "100%" }}>
+      <Grid style={{height:"25em"}} item xs={12} sm={12} md={12} lg={4} xl={4} >
+        <Card style={{ height: "100%", boxShadow:"none"}}>
             <CardContent>
               <img src={require("../../Assets/imgs/" + this.props.imgThumb)}></img>
               <Typography
