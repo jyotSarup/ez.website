@@ -1,4 +1,5 @@
 import React from 'react';
+
 //import { makeStyles } from '@material-ui/core/styles';
 
 function Contact() {
@@ -7,6 +8,7 @@ function Contact() {
             
            <h1>Contact Us</h1>
            
+
         </div>
     );
 }
