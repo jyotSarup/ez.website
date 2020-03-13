@@ -5,7 +5,7 @@ function Team() {
     return (
         <div className="wrap">
             
-           
+           Team
 
         </div>
     );
