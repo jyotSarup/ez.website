@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
   },
   wrap: {
     backgroundImage: `url(${PricingImg})`,
-    height: "22vh",
+    height: "25vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",

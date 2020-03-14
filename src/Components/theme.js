@@ -6,10 +6,12 @@ import { cyan, grey, red } from '@material-ui/core/colors';
 const theme = createMuiTheme({
   palette: {
     primary: cyan,
-    secondary: grey,
+    secondary: {
+      main: "#ffffff"
+    }
   },
   status: {
-    danger: "red"
+    danger: red,
   },
   breakpoints: {
     values: {
