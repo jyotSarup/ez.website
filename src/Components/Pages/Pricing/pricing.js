@@ -17,11 +17,8 @@ const useStyles = makeStyles(theme => ({
   heroContent: {
     padding: theme.spacing(8, 0, 6),
   },
-  wrapPricing: {
-    marginBottom: '60px',
-  },
   cardHeader: {
-    backgroundColor: '#00bcd4',
+    backgroundColor: '#2B879E',
     color: 'white',
   },
   cardPricing: {
@@ -61,7 +58,7 @@ const useStyles = makeStyles(theme => ({
   link: {
     margin: theme.spacing(1, 3),
     textDecoration: 'none',
-    color: '#00bcd4',
+    color: '#2B879E',
   },
 }));
 
@@ -125,13 +122,13 @@ export default function Pricing() {
           </div>
         </div>
 
-        <div className="wrapPricing">
+        <div>
           <Container maxWidth="xl" component="main">
             <Grid container spacing={3} alignItems="center">
               {tiers.map(tier => (
                 // Enterprise card is full width at sm breakpoint
                 <Grid item key={tier.title} xs={12} sm={12} md={6} lg={3} xl={3}>
-                  <Card>
+                  <Card style={{border: "1px solid #2B879E"}}>
                     <CardHeader
                       title={tier.title}
                       //subheader={tier.subheader}

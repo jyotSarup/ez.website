@@ -5,6 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import Logo from "./assets/logo.png";
 import {
   Link
 } from 'react-router-dom';
@@ -34,12 +35,17 @@ const useStyles = makeStyles(theme => ({
   link: {
     margin: theme.spacing(1, 3),
     textDecoration: 'none',
-    color: '#00bcd4',
+    color: '#2B879E',
   },
   button: {
     color: 'white',
-    backgroundColor: '#00bcd4',
+    backgroundColor: '#2B879E',
   },
+  logoLink: {
+    backgroundImage: `url(${Logo})`,
+    backgroundRepeat: "no-repeat",
+    height: "50px",
+  }
 }));
 
 export default function HeaderBar() {
@@ -51,8 +57,7 @@ export default function HeaderBar() {
       <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-            <Link variant="button" color="textPrimary" className={classes.link} to="/">
-              HOME
+            <Link variant="button" color="textPrimary" to="/"><div className={classes.logoLink}></div>
             </Link>
           </Typography>
           <nav>
