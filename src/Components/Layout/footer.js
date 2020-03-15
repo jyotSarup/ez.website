@@ -13,9 +13,9 @@ function Footer() {
                         To get tips about how to be a better manager
                     </div>
                     <div>
-                        <input type="text" placeholder="Your Email" style={{ color: "#00bcd4" }}></input>
+                        <input type="text" placeholder="Your Email" style={{ color: "#2B879E" }}></input>
                         {/* <TextField id="outlined-basic" label="Your Email" variant="outlined" size="small"  style={{backgroundColor:"white" , height:"2em"}} /> */}
-                        <button style={{ backgroundColor: "white", color: "#00bcd4", boxShadow: "none", padding: "2px 16px", border: "none", borderRadius: "2px", margin: "2px" }}>Send </button>
+                        <button style={{ backgroundColor: "white", color: "#2B879E", boxShadow: "none", padding: "2px 16px", border: "none", borderRadius: "2px", margin: "2px" }}>Send </button>
 
                     </div>
                 </div>
@@ -33,6 +33,7 @@ const useStyles = makeStyles({
     footerWrap: {
         display: "flex",
         flexDirection: "column",
+        marginTop: "60px",
     },
     newsLetterContent:
     {
@@ -43,8 +44,8 @@ const useStyles = makeStyles({
         padding: "2%",
         paddingLeft: "10%",
         paddingRight: "10%",
-        backgroundColor: "#00bcd4",
-        color: "black"
+        backgroundColor: "#2B879E",
+        color: "white",
     },
     copy: {
         display: "flex",

@@ -59,7 +59,7 @@ function HomePage() {
         className={classes.homeContentGrid}
         component="main"
         maxWidth="90%"
-        style={{ textAlign: "center", color: "#00bcd4" }}
+        style={{ textAlign: "center", color: "#2B879E" }}
       >
         <div className={classes.homeContentHeading}>
           <h1>Manage Realty Systems</h1>

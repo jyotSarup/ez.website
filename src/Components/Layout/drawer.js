@@ -74,7 +74,7 @@ const useStyles = makeStyles(theme => ({
     },
     drawerNav: {
         textDecoration: 'none',
-        color: '#00bcd4',
+        color: '#2B879E',
     },
 }));
 
