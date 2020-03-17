@@ -43,44 +43,50 @@ function HomePage() {
 
   return (
     <div className={classes.HomeBody}>
-      <div className={classes.wrap} >
+      <div className={classes.wrap}>
         <div className={classes.wrapContent}>
-        <h1>EASY REALTY SYSTEMS</h1>
-        <p>
-          A data-driven and responsive web solution which <br /> serves as
-          solution for real estate industry
-        </p>
-        <Button variant="contained" color="primary" href="#contained-buttons">
-          Get Started
-        </Button>
+          <h1>EASY REALTY SYSTEMS</h1>
+          <p style={{ marginTop: "1px" }}>
+            A data-driven and responsive web solution which <br /> serves as
+            solution for real estate industry
+          </p>
+          <Button variant="contained" color="primary" href="#contained-buttons">
+            Get Started
+          </Button>
         </div>
       </div>
-      <Container className={classes.homeContentGrid} component="main" style={{textAlign:"center", color:"#00bcd4"}}>
-        <div className={classes.homeContentHeading}>
-        <h1>Manage Realty Systems</h1>
-        <p style={{color:'#000' ,width:"50%", margin:"Auto"}}>
-          The system will help small/medium real estate organizations to manage the core operations of the business
-          which includes adding and updating the listings and realtors, and also will provide a data visualization of 
-          crucial company statistics.
-        </p>
-          </div>
-      <Grid
-        container
-        direction="row"
-        justify="space-evenly"
-        alignItems="center"
-        spacing={5}
-        style={{width:"95%", margin:"auto" }}
+      <Container
+        className={classes.homeContentGrid}
+        component="main"
+        maxWidth="90%"
+        style={{ textAlign: "center", color: "#2B879E" }}
       >
-        {homepageServicesCard.map(item => (
-          <CircularImageCard
-            key={item.title}
-            title={item.title}
-            detail={item.detail}
-            imgThumb={item.imgThumb}
-          ></CircularImageCard>
-        ))}
-      </Grid>
+        <div className={classes.homeContentHeading}>
+          <h1>Manage Realty Systems</h1>
+          <p style={{ color: "#000", width: "70%", margin: "Auto" }}>
+            The system will help small/medium real estate organizations to
+            manage the core operations of the business which includes adding and
+            updating the listings and realtors, and also will provide a data
+            visualization of crucial company statistics.
+          </p>
+        </div>
+        <Grid
+          container
+          direction="row"
+          justify="space-between"
+          alignItems="center"
+          spacing={4}
+          style={{ width: "80%", margin: "auto" }}
+        >
+          {homepageServicesCard.map(item => (
+            <CircularImageCard
+              key={item.title}
+              title={item.title}
+              detail={item.detail}
+              imgThumb={item.imgThumb}
+            ></CircularImageCard>
+          ))}
+        </Grid>
       </Container>
     </div>
   );
@@ -96,10 +102,10 @@ const useStyles = makeStyles({
     position: "relative",
     textAlign: "center",
     color: "#fff",
-    padding: "auto",
+    padding: "auto"
   },
-  wrapContent:{
-    display:"grid",
+  wrapContent: {
+    display: "grid",
     margin: 0,
     position: "absolute",
     top: "50%",
@@ -107,14 +113,12 @@ const useStyles = makeStyles({
     transform: "translate(-50%, -50%)"
   },
   HomeBody: {
-    display : "flex",
-    flexDirection: "column",
-    
+    display: "flex",
+    flexDirection: "column"
   },
-  homeContentGrid:{
-    display:"grid",
-  },
-  
+  homeContentGrid: {
+    display: "grid"
+  }
 });
 
 export default HomePage;
