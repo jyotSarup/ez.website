@@ -4,6 +4,7 @@ import { FormLabel } from '@material-ui/core';
 import {FormControl} from '@material-ui/core';
 import { TextField } from '@material-ui/core';
 import {Button} from '@material-ui/core';
+import CircleImg from "./assets/Contact_Shape.png";
 
 function Contact() {
     return (
@@ -37,7 +38,7 @@ function Contact() {
                 </div>
             </div>
             <div className="contact_circular_shape">
-                
+            <img src ={CircleImg}/>
             </div>
         </div>)
 }
