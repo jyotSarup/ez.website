@@ -1,20 +1,9 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TeamImg from "./assets/team.png";
-import { createMuiTheme, ThemeProvider, MuiThemeProvider } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import CircularImageCard from "../../Layout/CircularImageCard";
-
-const theme = createMuiTheme({
-    overrides: {
-        MuiCardContent: {
-            root: {
-                backgroundColor: "#000",
-            },
-        },
-    }
-});
 
 function Team() {
     const classes = useStyles();

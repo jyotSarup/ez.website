@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 
@@ -12,7 +10,7 @@ class CircularImageCard extends React.Component {
       <Grid style={{height:"25em"}} item xs={12} sm={12} md={12} lg={4} xl={4} >
         <Card style={{ height: "100%", boxShadow:"none"}}>
             <CardContent>
-              <img src={require("../../Assets/imgs/" + this.props.imgThumb)}></img>
+              <img alt={'icon for services'} src={require("../../Assets/imgs/" + this.props.imgThumb)}></img>
               <Typography
                 gutterBottom
                 variant="h5"

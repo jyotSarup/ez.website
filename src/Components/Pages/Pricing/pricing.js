@@ -64,9 +64,13 @@ const useStyles = makeStyles(theme => ({
 
 const tiers = [
   {
-    title: 'Free',
+    title: 'Free Trial',
     price: '0',
-    description: ['10 users included', '2 GB of storage', 'Email support', '1 Email account'],
+    description: [
+      '5 users included', 
+      '2 GB of storage', 
+      'Email support', 
+      '1 Email account'],
     buttonVariant: 'outlined',
   },
   {
@@ -74,10 +78,10 @@ const tiers = [
     subheader: 'Most popular',
     price: '15',
     description: [
-      '20 users included',
-      '10 GB of storage',
+      '10 users included',
+      '20 GB of storage',
       'Priority email support',
-      '5 Email account',
+      '10 Email accounts',
     ],
     buttonVariant: 'outlined',
   },
@@ -85,10 +89,10 @@ const tiers = [
     title: 'Pro',
     price: '30',
     description: [
-      '500 users included',
-      '30 GB of storage',
+      '30 users included',
+      '50 GB of storage',
       'Phone & email support',
-      '10 Email account',
+      '30 Email accounts',
     ],
     buttonVariant: 'outlined',
   },
@@ -96,10 +100,10 @@ const tiers = [
     title: 'Custom',
     price: '50',
     description: [
-      '100 users included',
+      'Unlimited users',
       '200 GB of storage',
       'Phone & email support',
-      '20 Email account',
+      'Unlimited Email accounts',
     ],
     buttonVariant: 'outlined',
   },
