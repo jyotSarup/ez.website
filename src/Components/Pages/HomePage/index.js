@@ -2,23 +2,9 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import heroImage from "./assets/home-hero-image.png";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import CircularImageCard from "../../Layout/CircularImageCard";
-
-const theme = createMuiTheme({
-  overrides: {
-    // Style sheet name ⚛️
-    MuiCardMedia: {
-      // Name of the rule
-      text: {
-        // Some CSS
-        borderRadius: "50%"
-      }
-    }
-  }
-});
 
 function HomePage() {
   const classes = useStyles();
