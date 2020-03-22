@@ -7,21 +7,23 @@ import Grid from "@material-ui/core/Grid";
 class CircularImageCard extends React.Component {
   render() {
     return (
-      <Grid style={{height:"25em"}} item xs={12} sm={12} md={12} lg={4} xl={4} >
-        <Card style={{ height: "100%", boxShadow:"none"}}>
+      <Grid style={{ maxWidth: "100%"}} item xs={12} sm={12} md={12} lg={4} xl={4} >
+        <Card style={{ boxShadow:"none", width:"fit-content"}}>
             <CardContent>
-              <img alt={'icon for services'} src={require("../../Assets/imgs/" + this.props.imgThumb)}></img>
+              <img id="featureImg" alt={'icon for services'} src={require("../../Assets/imgs/" + this.props.imgThumb)}></img>
               <Typography
                 gutterBottom
-                variant="h5"
+                variant="h2"
                 component="h2"
-                style={{ textAlign: "center" }}
+                color="textSecondary"
+                style={{ textAlign: "center", paddingTop: "20px" }}
               >
-                {this.props.title}
+                <span class="spanLink">{this.props.title}</span> <span class="spanLink"><a href={"https://www.linkedin.com/in/" + (this.props.link)}><img className="linkedinImg" src={require("../../Assets/imgs/linkedin.png")} alt={'linkedin icon'}></img></a></span>
               </Typography>
-              <Typography variant="body2" color="textPrimary" component="p">
-                {this.props.detail}
-              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">{this.props.detail}</Typography>
+              <br></br>
+              <Typography variant="body1" color="textSecondary" component="p" style={{fontStyle: "italic"}}>{this.props.info}</Typography>
+
             </CardContent>
         </Card>
       </Grid>
