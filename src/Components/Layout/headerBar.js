@@ -24,7 +24,9 @@ const useStyles = makeStyles(theme => ({
     borderBottom: `1px solid ${theme.palette.divider}`,
     [theme.breakpoints.down('sm')]: {
       display: 'none',
-  },
+    },
+    backgroundColor: "#ffffff",
+    height: "70px"
   },
   toolbar: {
     flexWrap: 'wrap',
@@ -36,15 +38,20 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(1, 3),
     textDecoration: 'none',
     color: '#2B879E',
+    fontSize: "16px"
   },
   button: {
     color: 'white',
     backgroundColor: '#2B879E',
+    '&:hover': {
+      background: "white",
+      color: '#2B879E'
+  },
   },
   logoLink: {
     backgroundImage: `url(${Logo})`,
     backgroundRepeat: "no-repeat",
-    height: "50px",
+    height: "51px",
   }
 }));
 
@@ -55,26 +62,26 @@ export default function HeaderBar() {
     <React.Fragment>
       <CssBaseline />
       <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
-        <Toolbar>
+        <Toolbar style={{marginTop: "3px"}}>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
             <Link variant="button" color="textPrimary" to="/"><div className={classes.logoLink}></div>
             </Link>
           </Typography>
           <nav>
-            <Link variant="button" color="textPrimary" className={classes.link} to="/Services">
+            <Link variant="subtitle1" className={classes.link} to="/Services">
               Services
             </Link>
-            <Link variant="button" color="textPrimary" href="#" className={classes.link} to="/Pricing">
+            <Link variant="subtitle1"  href="#" className={classes.link} to="/Pricing">
               Pricing
             </Link>
-            <Link variant="button" color="textPrimary" href="#" className={classes.link} to="/Team">
+            <Link variant="button"  href="#" className={classes.link} to="/Team">
               Team
             </Link>
-            <Link variant="button" color="textPrimary" href="#" className={classes.link} to="/Contact">
+            <Link variant="button"  href="#" className={classes.link} to="/Contact">
               Contact
             </Link>
           </nav>
-          <Button href="#" color="primary" variant="outlined" className={classes.button}>
+          <Button href="http://admin.easyrealtysystem.wmdd.ca/" color="primary" variant="outlined" className={classes.button}>
             Log in
           </Button>
         </Toolbar>

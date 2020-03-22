@@ -31,7 +31,6 @@ const useStyles = makeStyles({
     footerWrap: {
         display: "flex",
         flexDirection: "column",
-        marginTop: "60px",
     },
     newsLetterContent:
     {

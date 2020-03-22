@@ -13,10 +13,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import CloseIcon from '@material-ui/icons/Close';
-
-import {
-    Link
-} from 'react-router-dom';
+import LogoMobile from "./assets/logoMobile.png";
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -31,6 +29,8 @@ const useStyles = makeStyles(theme => ({
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
         }),
+        backgroundColor: "#fff",
+        height: "50px"
     },
     appBarShift: {
         width: `calc(100% - ${drawerWidth}px)`,
@@ -72,7 +72,14 @@ const useStyles = makeStyles(theme => ({
     drawerNav: {
         textDecoration: 'none',
         color: '#2B879E',
+        fontSize: "16px"
     },
+    logoLink: {
+        backgroundImage: `url(${LogoMobile})`,
+        backgroundRepeat: "no-repeat",
+        height: "51px",
+        marginTop: "10px"
+      }
 }));
 
 export default function PersistentDrawerRight() {
@@ -99,14 +106,16 @@ export default function PersistentDrawerRight() {
             >
                 <Toolbar >
                     <Typography variant="h6" noWrap className={classes.title}>
-                        LOGO
-          </Typography>
+                        <Link variant="button" color="textPrimary" to="/"><div className={classes.logoLink}></div>
+                        </Link>
+                    </Typography>
                     <IconButton
 
                         aria-label="open drawer"
                         edge="end"
                         onClick={handleDrawerOpen}
                         className={clsx(open && classes.hide)}
+                        style={{color: "#2B879E"}}
                     >
                         <MenuIcon />
                     </IconButton>
@@ -128,7 +137,7 @@ export default function PersistentDrawerRight() {
                 }}
             >
                 <div className={classes.drawerHeader}>
-                    <IconButton onClick={handleDrawerClose}>
+                    <IconButton onClick={handleDrawerClose} style={{color: "#2B879E" }}>
                         {theme.direction === 'rtl' ? <CloseIcon /> : <CloseIcon />}
                     </IconButton>
                 </div>
@@ -146,7 +155,7 @@ export default function PersistentDrawerRight() {
                             </ListItem>
                         ))}
                 </List>
-                <Divider />
+                {/* <Divider /> */}
             </Drawer>
         </div>
     );
