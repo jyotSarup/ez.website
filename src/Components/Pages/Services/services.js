@@ -10,8 +10,6 @@ import ServicesBall2 from "./assets/services_ball2.png";
 import ServicesBall3 from "./assets/services_ball3.png";
 import Typography from '@material-ui/core/Typography';
 
-
-
 const useStyles = makeStyles(theme => ({
   root: {
     position: "relative",
@@ -92,12 +90,8 @@ const useStyles = makeStyles(theme => ({
       backgroundPosition: "center"
     }
   },
-  titles: {
-    color: '#2B879E',
-  },
   titlesRight: {
     textAlign: "right",
-    color: '#2B879E',
     marginRight: "8px"
   },
   description: {
@@ -188,25 +182,25 @@ export default function Services() {
         <div className={classes.wrapServices}>
           <Grid container>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight: "30px"}}>
-              <Typography variant="h4" className={classes.titles}>Dashboard</Typography>
+              <Typography variant="h4" color="primary">Dashboard</Typography>
               <div className={classes.dashImg}></div>
             </Grid>
             <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6}>
-              <Typography variant="body2" color="textSecondary" >
+              <Typography variant="body2" color="textPrimary" >
                 Find dinamic charts that to analyse your business over time:<br></br><br></br>
-            - Sales by type of property<br></br>
-            - Sales by realtor<br></br><br></br>
+                - Sales by type of property<br></br>
+                - Sales by realtor<br></br><br></br>
 
-            And choose the metrics you want: <br></br>
-            - Sales by quantity<br></br>
-            - Sales by amount<br></br>
+                And choose the metrics you want: <br></br>
+                - Sales by quantity<br></br>
+                - Sales by amount<br></br>
               </Typography>
             </Grid>
           </Grid>
           <br></br><br></br>
           <Grid container className={classes.largeGrid}>
             <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight: "30px"}}>
-              <Typography variant="body2" color="textSecondary" style={{maxWidth:"748px"}}>Manage your listings by exploring this feature:<br></br><br></br>
+              <Typography variant="body2" color="textPrimary" style={{maxWidth:"748px"}}>Manage your listings by exploring this feature:<br></br><br></br>
           - Add listings with all characteristics and photos<br></br>
           - Quiclky assign the listings to a realtor<br></br>
           - Manage the status of your listings: active, inactive, sold<br></br>
@@ -215,18 +209,18 @@ export default function Services() {
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-              <Typography variant="h4" className={classes.titlesRight}>Listings</Typography>
+              <Typography variant="h4" color="primary" className={classes.titlesRight}>Listings</Typography>
               <div className={classes.listImg}></div>
             </Grid>
           </Grid>
           <br></br>
           <Grid container className={classes.smallGrid}>
             <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-              <Typography variant="h4" className={classes.titles}>Listings</Typography>
+              <Typography variant="h4" color="primary">Listings</Typography>
               <div className={classes.listImg}></div>
             </Grid>
             <Grid className={classes.description} item xs={12} sm={12} md={12} lg={6} xl={6}>
-              <Typography variant="body2" color="textSecondary" style={{maxWidth:"748px"}}>Manage your listings by exploring this feature:<br></br><br></br>
+              <Typography variant="body2" color="textPrimary" style={{maxWidth:"748px"}}>Manage your listings by exploring this feature:<br></br><br></br>
               - Add listings with all characteristics and photos<br></br>
               - Quiclky assign the listings to a realtor<br></br>
               - Manage the status of your listings: active, inactive, sold<br></br>
@@ -238,11 +232,11 @@ export default function Services() {
           <br></br> <br></br>
           <Grid container>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight: "30px"}}>
-              <Typography variant="h4" className={classes.titles}>Realtors</Typography>
+              <Typography variant="h4" color="primary">Realtors</Typography>
               <div className={classes.realImg}></div>
             </Grid>
             <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6}>
-              <Typography variant="body2" color="textSecondary" style={{maxWidth:"748px"}}>Manage your realtors efficiently by exploring this feature:<br></br><br></br>
+              <Typography variant="body2" color="textPrimary" style={{maxWidth:"748px"}}>Manage your realtors efficiently by exploring this feature:<br></br><br></br>
               - Add realtors with their photo and information<br></br>
               - View recent houses assigned to a realtor<br></br>
               - Easily edit and delete realtors<br></br>

@@ -15,14 +15,14 @@ class CircularImageCard extends React.Component {
                 gutterBottom
                 variant="h2"
                 component="h2"
-                color="textSecondary"
+                color="textPrimary"
                 style={{ textAlign: "center", paddingTop: "20px" }}
               >
                 <span class="spanLink">{this.props.title}</span> <span class="spanLink"><a href={"https://www.linkedin.com/in/" + (this.props.link)}><img className="linkedinImg" src={require("../../Assets/imgs/linkedin.png")} alt={'linkedin icon'}></img></a></span>
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">{this.props.detail}</Typography>
+              <Typography variant="body2" color="textPrimary" component="p">{this.props.detail}</Typography>
               <br></br>
-              <Typography variant="body1" color="textSecondary" component="p" style={{fontStyle: "italic"}}>{this.props.info}</Typography>
+              <Typography variant="body1" color="textPrimary" component="p" style={{fontStyle: "italic"}}>{this.props.info}</Typography>
 
             </CardContent>
         </Card>
