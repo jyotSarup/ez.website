@@ -96,7 +96,7 @@ export default function HomePage() {
 
               <Typography variant="h4">Manage Realty System</Typography>
 
-              <Typography variant="body2" color="textSecondary" style={{ width: "80%", margin: "Auto", paddingBottom: "30px" }}> The system will help small and medium real estate organizations to manage the core operations of their business which includes adding and
+              <Typography variant="body2" color="textPrimary" style={{ width: "80%", margin: "Auto", paddingBottom: "30px" }}> The system will help small and medium real estate organizations to manage the core operations of their business which includes adding and
               updating the listings and realtors, and also will provide a data
             visualization of crucial company statistics.</Typography>
             </div>

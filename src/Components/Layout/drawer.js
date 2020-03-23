@@ -106,7 +106,7 @@ export default function PersistentDrawerRight() {
             >
                 <Toolbar >
                     <Typography variant="h6" noWrap className={classes.title}>
-                        <Link variant="button" color="textPrimary" to="/"><div className={classes.logoLink}></div>
+                        <Link variant="button" to="/"><div className={classes.logoLink}></div>
                         </Link>
                     </Typography>
                     <IconButton

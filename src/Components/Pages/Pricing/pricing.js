@@ -126,16 +126,16 @@ export default function Pricing() {
                     />
                     <CardContent>
                       <div className={classes.cardPricing}>
-                        <Typography component="h2" variant="h3" color="textSecondary">
+                        <Typography component="h2" variant="h3" color="textPrimary">
                           ${tier.price}
                         </Typography>
-                        <Typography variant="h6" color="textSecondary">
+                        <Typography variant="h6" color="textPrimary">
                           /mo
                     </Typography>
                       </div>
                       <ul>
                         {tier.description.map(line => (
-                          <Typography className={classes.descCard} component="li" variant="body1" align="center" key={line} color="textSecondary">
+                          <Typography className={classes.descCard} component="li" variant="body1" align="center" key={line} color="textPrimary">
                             {line}
                           </Typography>
                         ))}
@@ -143,7 +143,7 @@ export default function Pricing() {
                     </CardContent>
                       <CardActions>
                         <Button style={{ width: "175px", margin: "15px auto", border: "1px solid #2B879E" }} color="primary">
-                          <Link variant="button" color="textPrimary" href="#" className={classes.link} to="/Contact">
+                          <Link variant="button" href="#" className={classes.link} to="/Contact">
                             Contact Us
                         </Link>
                         </Button>

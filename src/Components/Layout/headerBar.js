@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(1, 3),
     textDecoration: 'none',
     color: '#2B879E',
-    fontSize: "16px"
+    fontSize: "16px",
   },
   button: {
     color: 'white',
@@ -63,8 +63,8 @@ export default function HeaderBar() {
       <CssBaseline />
       <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
         <Toolbar style={{marginTop: "3px"}}>
-          <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-            <Link variant="button" color="textPrimary" to="/"><div className={classes.logoLink}></div>
+          <Typography noWrap className={classes.toolbarTitle}>
+            <Link variant="button" to="/"><div className={classes.logoLink}></div>
             </Link>
           </Typography>
           <nav>

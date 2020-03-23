@@ -1,34 +1,20 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-import { red } from '@material-ui/core/colors';
-
 
 const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#2B879E"
-    },
-    secondary: {
-      main: "#ffffff",
-    },
-    text: {
-      primary: "#ffffff",
-      secondary: "#000000"
-    },
-  },
-  status: {
-    danger: red,
-  },
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 900,
-      lg: 1200,
-      xl: 1400
-    }
-  },
   typography: {
+    fontFamily: [
+      'Open Sans',
+      'sans-serif',
+    ].join(','),
+    h5: {
+      fontWeight: "800",
+      fontSize: "2vw",
+      '@media (max-width:1200px)': {
+        fontSize: '28px',
+      },
+      color: "#2B879E"
+    },
     h4: {
       fontSize: "2.7vw",
       fontWeight: "800",
@@ -67,19 +53,27 @@ const theme = createMuiTheme({
         fontSize: '16px',
       },
     },
-    h5: {
-      fontWeight: "800",
-      fontSize: "2vw",
-      '@media (max-width:1200px)': {
-        fontSize: '28px',
-      },
-    },
-    fontFamily: [
-      'Open Sans',
-      'serif',
-    ].join(','),
   },
-
+  palette: {
+    primary: {
+      main: "#2B879E"
+    },
+    secondary: {
+      main: "#ffffff",
+    },
+    text: {
+      primary: "#000000"
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1400
+    }
+  },
 });
 
 export default theme;
