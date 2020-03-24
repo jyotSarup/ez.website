@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Card, CardActions, CardContent, CardHeader, CssBaseline, Grid, Typography, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import PricingImg from "./assets/pricing.png";
+import PricingImg from "./assets/pricing.jpg";
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
@@ -46,7 +46,9 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
     color: '#2B879E',
     fontWeight: "bold",
-    textTransform: "capitalize"
+    textTransform: "capitalize",
+    display: "block",
+    width: "100%"
   },
   descCard: {
     textAlign: "center",

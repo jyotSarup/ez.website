@@ -7,7 +7,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ListItem from '@material-ui/core/ListItem';
@@ -141,7 +140,6 @@ export default function PersistentDrawerRight() {
                         {theme.direction === 'rtl' ? <CloseIcon /> : <CloseIcon />}
                     </IconButton>
                 </div>
-                {/* <Divider /> */}
                 <List onClick={handleDrawerClose}>
                     {[
                         <Link className={classes.drawerNav} to="/">Home</Link>,
@@ -155,7 +153,6 @@ export default function PersistentDrawerRight() {
                             </ListItem>
                         ))}
                 </List>
-                {/* <Divider /> */}
             </Drawer>
         </div>
     );
