@@ -1,39 +1,13 @@
 import React from 'react';
-import { makeStyles } from "@material-ui/core/styles";
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-function Footer() {
-    const classes = useStyles();
-    return (
-        <footer>
-            <div className={classes.footerWrap}>
-                <div className={classes.newsLetterContent}>
-                    <div>
-                        <h4 style={{ margin: 0 }}>Subscribe to our newsletter</h4>
-                        To get tips about how to be a better manager
-                    </div>
-                    <div>
-                        <input type="text" placeholder="Your Email" style={{ color: "#2B879E" }}></input>
-                        {/* <TextField id="outlined-basic" label="Your Email" variant="outlined" size="small"  style={{backgroundColor:"white" , height:"2em"}} /> */}
-                        <button style={{ backgroundColor: "white", color: "#2B879E", boxShadow: "none", padding: "2px 16px", border: "none", borderRadius: "2px", margin: "2px" }}>Send </button>
+import { makeStyles, AppBar, Toolbar, Typography } from '@material-ui/core';
+import Logo from "./assets/logo.png";
+import { Link } from 'react-router-dom';
+import LogoMobile from "./assets/logoMobile.png";
 
-                    </div>
-                </div>
-
-                &copy; {new Date().getFullYear()} Easy Realty System
-
-            </div>
-
-
-        </footer>
-    );
-}
-
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     footerWrap: {
         display: "flex",
         flexDirection: "column",
-        marginTop: "60px",
     },
     newsLetterContent:
     {
@@ -46,12 +20,91 @@ const useStyles = makeStyles({
         paddingRight: "10%",
         backgroundColor: "#2B879E",
         color: "white",
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: "column",
+            textAlign: "center",
+        },
     },
-    copy: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+    appBar: {
+        borderBottom: `1px solid ${theme.palette.divider}`,
+        backgroundColor: "#ffffff",
+        height: "70px",
+        padding: "0 10%"
     },
-});
-export default Footer;
+    toolbarTitle: {
+        flexGrow: 1,
+    },
+    logoLink: {
+        backgroundImage: `url(${Logo})`,
+        [theme.breakpoints.down('sm')]: {
+            backgroundImage: `url(${LogoMobile})`,
+            marginTop: "10px",
+        },
+        backgroundRepeat: "no-repeat",
+        height: "51px",
+    },
+    email: {
+        [theme.breakpoints.down('sm')]: {
+            marginTop: "14px",
+            marginBottom: "12px",
+        },
+    },
+    input: {
+        color: "#2B879E",
+        height: "40px",
+        width: "320px",
+        borderRadius: "4px",
+        fontSize: "20px",
+        fontStyle: "italic",
+        paddingLeft: "10px",
+        [theme.breakpoints.down('sm')]: {
+            width: "240px",
+            fontSize: "16px"
+        },
+    },
+    sendBtn: {
+        backgroundColor: "white",
+        color: "#2B879E",
+        boxShadow: "none",
+        padding: "2px 16px",
+        border: "none",
+        borderRadius: "4px",
+        width: "100px",
+        height: "40px",
+        marginLeft: "20px",
+        fontSize: "22px",
+        [theme.breakpoints.down('sm')]: {
+            width: "94px",
+            fontSize: "16px"
+        },
+    }
+}));
+
+export default function Footer() {
+    const classes = useStyles();
+    return (
+        <footer>
+            <div className={classes.footerWrap}>
+                <div className={classes.newsLetterContent}>
+                    <div>
+                        <Typography variant="subtitle1">Subscribe to our newsletter</Typography>
+                        <Typography variant="body1">To get tips about how to be a better manager</Typography>
+                    </div>
+                    <div style={{ display: "flex" }} className={classes.email}>
+                        <input className={classes.input} type="text" placeholder="Your Email"></input>
+                        <button className={classes.sendBtn}>Send </button>
+                    </div>
+                </div>
+                <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
+                    <Toolbar style={{ marginTop: "3px", padding: "0" }}>
+                        <Typography noWrap className={classes.toolbarTitle}>
+                            <Link variant="button" to="/"><div className={classes.logoLink}></div>
+                            </Link>
+                        </Typography>
+                            &copy; {new Date().getFullYear()} Easy Realty System
+                    </Toolbar>
+                </AppBar>
+            </div>
+        </footer>
+    );
+}

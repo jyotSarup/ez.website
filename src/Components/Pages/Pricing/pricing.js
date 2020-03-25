@@ -1,10 +1,7 @@
 import React from 'react';
-import { Button, Card, CardActions, CardContent, CardHeader, CssBaseline, Grid, Typography, Container } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import PricingImg from "./assets/pricing.png";
-import {
-  Link
-} from 'react-router-dom';
+import { Button, Card, CardActions, CardContent, CardHeader, CssBaseline, Grid, Typography, Container, makeStyles } from '@material-ui/core';
+import PricingImg from "./assets/pricing.jpg";
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -14,8 +11,10 @@ const useStyles = makeStyles(theme => ({
       listStyle: 'none',
     },
   },
-  heroContent: {
-    padding: theme.spacing(8, 0, 6),
+  outContainer: {
+    position: "relative",
+    zIndex: "0",
+    paddingBottom: "60px"
   },
   cardHeader: {
     backgroundColor: '#2B879E',
@@ -25,11 +24,12 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'baseline',
-    marginBottom: theme.spacing(2),
+    marginTop: "20px",
+    marginBottom: "25px",
   },
   wrap: {
     backgroundImage: `url(${PricingImg})`,
-    height: "25vh",
+    height: "32vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
@@ -38,70 +38,66 @@ const useStyles = makeStyles(theme => ({
     color: "#fff",
     padding: "auto",
     marginBottom: "60px",
-  },
-  wrapContent: {
-    display: "grid",
-    margin: 0,
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)"
-  },
-  HomeBody: {
-    display: "flex",
-    flexDirection: "column",
-
-  },
-  homeContentGrid: {
-    display: "grid",
+    paddingTop: "10vh",
   },
   link: {
     margin: theme.spacing(1, 3),
     textDecoration: 'none',
     color: '#2B879E',
+    fontWeight: "bold",
+    textTransform: "capitalize",
+    display: "block",
+    width: "100%"
   },
+  descCard: {
+    textAlign: "center",
+    padding: "8px 0px",
+    borderBottom: "1px solid #2B879E",
+    width: "85%",
+    margin: "auto"
+  }
 }));
 
 const tiers = [
   {
-    title: 'Free',
+    title: 'Free Trial',
     price: '0',
-    description: ['10 users included', '2 GB of storage', 'Email support', '1 Email account'],
-    buttonVariant: 'outlined',
+    description: [
+      '5 users included',
+      '2 GB of storage',
+      'Email support',
+      '1 Email account'],
   },
   {
     title: 'Basic',
     subheader: 'Most popular',
     price: '15',
     description: [
-      '20 users included',
-      '10 GB of storage',
+      '10 users included',
+      '20 GB of storage',
       'Priority email support',
-      '5 Email account',
+      '10 Email accounts',
     ],
-    buttonVariant: 'outlined',
   },
   {
     title: 'Pro',
     price: '30',
     description: [
-      '500 users included',
-      '30 GB of storage',
+      '30 users included',
+      '50 GB of storage',
       'Phone & email support',
-      '10 Email account',
+      '30 Email accounts',
     ],
-    buttonVariant: 'outlined',
   },
   {
     title: 'Custom',
     price: '50',
     description: [
-      '100 users included',
+      'Unlimited users',
       '200 GB of storage',
       'Phone & email support',
-      '20 Email account',
+      'Unlimited Email',
     ],
-    buttonVariant: 'outlined',
   },
 ];
 
@@ -112,29 +108,21 @@ export default function Pricing() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <div className={classes.HomeBody}>
+      <div className={classes.outContainer}>
         <div className={classes.wrap} >
-          <div className={classes.wrapContent}>
-            <h1>PRICING</h1>
-            <p>
-              Plans for all companies <br /> Choose the best for your business
-        </p>
-          </div>
+          <Typography variant="h4">PRICING</Typography>
+          <Typography variant="subtitle1">Plans for all companies <br /> Choose the best for your business</Typography>
         </div>
 
         <div>
-          <Container maxWidth="xl" component="main">
+          <Container width="85%" maxWidth="xl" component="main">
             <Grid container spacing={3} alignItems="center">
               {tiers.map(tier => (
-                // Enterprise card is full width at sm breakpoint
-                <Grid item key={tier.title} xs={12} sm={12} md={6} lg={3} xl={3}>
-                  <Card style={{border: "1px solid #2B879E"}}>
+                <Grid item key={tier.title} xs={12} sm={6} md={6} lg={3} xl={3}>
+                  <Card style={{ border: "1px solid #2B879E" }}>
                     <CardHeader
                       title={tier.title}
-                      //subheader={tier.subheader}
-                      titleTypographyProps={{ align: 'center' }}
-                      subheaderTypographyProps={{ align: 'center' }}
-                      //action={tier.title === 'Pro' ? <StarIcon /> : null}
+                      titleTypographyProps={{ align: 'center', variant: "h5" }}
                       className={classes.cardHeader}
                     />
                     <CardContent>
@@ -142,26 +130,25 @@ export default function Pricing() {
                         <Typography component="h2" variant="h3" color="textPrimary">
                           ${tier.price}
                         </Typography>
-                        <Typography variant="h6" color="textSecondary">
+                        <Typography variant="h6" color="textPrimary">
                           /mo
                     </Typography>
                       </div>
                       <ul>
                         {tier.description.map(line => (
-                          <Typography component="li" variant="subtitle1" align="center" key={line}>
+                          <Typography className={classes.descCard} component="li" variant="body1" align="center" key={line} color="textPrimary">
                             {line}
                           </Typography>
                         ))}
                       </ul>
                     </CardContent>
-                    <CardActions>
-                      <Button fullWidth variant={tier.buttonVariant} color="primary">
-
-                        <Link variant="button" color="textPrimary" href="#" className={classes.link} to="/Contact">
-                          Contact Us
+                      <CardActions>
+                        <Button style={{ width: "175px", margin: "15px auto", border: "1px solid #2B879E" }} color="primary">
+                          <Link variant="button" href="#" className={classes.link} to="/Contact">
+                            Contact Us
                         </Link>
-                      </Button>
-                    </CardActions>
+                        </Button>
+                      </CardActions>
                   </Card>
                 </Grid>
               ))}
@@ -172,3 +159,5 @@ export default function Pricing() {
     </React.Fragment>
   );
 }
+
+// References: Material UI - https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/pricing

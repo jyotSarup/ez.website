@@ -6,11 +6,13 @@ import { TextField } from '@material-ui/core';
 import { Button } from '@material-ui/core';
 import CircleImg from "./assets/Contact_Shape.png";
 
+
 function Contact() {
     return (
         <div className="wrapContact">
-            <div className="contact_header">
-
+            
+           <h1>Contact Us</h1>
+           
             </div>
             <div className="contact">
                 <Typography variant="h2" className="contact_heading">
@@ -41,6 +43,8 @@ function Contact() {
                 {/* <img src ={CircleImg}/> */}
             </div>
         </div>)
+        </div>
+    );
 }
 
 export default Contact;

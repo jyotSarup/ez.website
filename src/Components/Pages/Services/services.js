@@ -1,17 +1,21 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import ServicesImg from "./assets/services.png";
-import ServicesDashboard from "./assets/services_dash.png";
-import ServicesListings from "./assets/services_listings.png";
-import ServicesRealtors from "./assets/services_realtors.png";
-
+import { makeStyles, Grid, Typography } from '@material-ui/core';
+import ServicesImg from "./assets/services.jpg";
+import ServicesDashboard from "./assets/services_dash.jpg";
+import ServicesListings from "./assets/services_listings.jpg";
+import ServicesRealtors from "./assets/services_realtors.jpg";
+import ServicesBall1 from "./assets/services_ball1.png";
+import ServicesBall2 from "./assets/services_ball2.png";
+import ServicesBall3 from "./assets/services_ball3.png";
 
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    position: "relative",
+  },
   wrap: {
     backgroundImage: `url(${ServicesImg})`,
-    height: "25vh",
+    height: "32vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
@@ -20,48 +24,145 @@ const useStyles = makeStyles(theme => ({
     color: "#fff",
     padding: "auto",
     marginBottom: "60px",
+    paddingTop: "10vh",
   },
-  wrapContent: {
-    display: "grid",
-    margin: 0,
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)"
+  wrapServices: {
+    width: "85%",
+    margin: "auto",
+    paddingBottom: "60px",
+    [theme.breakpoints.down('sm')]: {
+      textAlign: "center",
+    },
+    maxWidth: "1480px"
   },
   dashImg: {
     backgroundImage: `url(${ServicesDashboard})`,
     width: "100%",
-    height: "300px",
+    height: "39vh",
+    maxHeight: "424px",
+    minHeight: "169px",
+    marginLeft: "-8px",
+    minWidth: "301px",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundSize: "contain"
+    backgroundPosition: "left",
+    backgroundSize: "contain",
+    [theme.breakpoints.down('md')]: {
+      height: 'auto',
+    },
+    [theme.breakpoints.down('sm')]: {
+      backgroundPosition: "center"
+    }
   },
   listImg: {
     backgroundImage: `url(${ServicesListings})`,
     width: "100%",
-    height: "300px",
+    height: "39vh",
+    minWidth: "301px",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundSize: "contain"
+    backgroundPosition: "right",
+    backgroundSize: "contain",
+    maxHeight: "424px",
+    minHeight: "169px",
+    marginLeft: "-8px",
+    [theme.breakpoints.down('md')]: {
+      height: 'auto',
+    },
+    [theme.breakpoints.down('sm')]: {
+      backgroundPosition: "center"
+    }
   },
   realImg: {
     backgroundImage: `url(${ServicesRealtors})`,
     width: "100%",
-    height: "300px",
+    height: "39vh",
+    minWidth: "301px",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundSize: "contain"
+    backgroundPosition: "left",
+    backgroundSize: "contain",
+    maxHeight: "424px",
+    minHeight: "169px",
+    marginLeft: "-8px",
+    [theme.breakpoints.down('md')]: {
+      height: 'auto',
+    },
+    [theme.breakpoints.down('sm')]: {
+      backgroundPosition: "center"
+    }
   },
-  titles: {
-    textAlign: "center",
-    color: '#2B879E',
-    fontWeight: "bold",
+  titlesRight: {
+    textAlign: "right",
+    marginRight: "8px"
   },
   description: {
     margin: "auto",
-    padding: "0 20px",
-  }
+  },
+  outContainer: {
+    position: "relative",
+    zIndex: "0",
+  },
+  ball1: {
+    position: "absolute",
+    top: "460px",
+    left: "0",
+    width: "100%",
+    height: "42vh",
+    backgroundImage: `url(${ServicesBall1})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "left",
+    backgroundSize: "contain",
+    zIndex: "-1",
+    [theme.breakpoints.down('md')]: {
+      height: '200px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      top: "300px",
+    }
+  },
+  ball2: {
+    position: "absolute",
+    top: "830px",
+    right: "0",
+    width: "100%",
+    height: "42vh",
+    backgroundImage: `url(${ServicesBall2})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "right",
+    backgroundSize: "contain",
+    zIndex: "-1",
+    [theme.breakpoints.down('md')]: {
+      height: '200px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      top: "700px",
+    }
+  },
+  ball3: {
+    position: "absolute",
+    bottom: "0",
+    width: "100%",
+    height: "200px",
+    backgroundImage: `url(${ServicesBall3})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "contain",
+    zIndex: "-1",
+    [theme.breakpoints.down('md')]: {
+      height: '100px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      display: "none",
+    }
+  },
+  smallGrid: {
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    }
+  },
+  largeGrid: {
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    }
+  },
 }));
 
 export default function Services() {
@@ -69,43 +170,82 @@ export default function Services() {
 
   return (
     <div className={classes.root}>
-      <div className={classes.wrap} >
-        <div className={classes.wrapContent}>
-          <h1>SERVICES</h1>
-          <p>
-            The best solutions for your Real State Business
-        </p>
+      <div className={classes.outContainer}>
+        <div className={classes.ball1}></div>
+        <div className={classes.ball2}></div>
+        <div className={classes.ball3}></div>
+        <div className={classes.wrap} >
+          <Typography variant="h4">SERVICES</Typography>
+          <Typography variant="subtitle1">The best solutions for your Real State Business</Typography>
+        </div>
+        <div className={classes.wrapServices}>
+          <Grid container>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight: "30px"}}>
+              <Typography variant="h4" color="primary">Dashboard</Typography>
+              <div className={classes.dashImg}></div>
+            </Grid>
+            <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Typography variant="body2" color="textPrimary" >
+                Find dinamic charts that to analyse your business over time:<br></br><br></br>
+                - Sales by type of property<br></br>
+                - Sales by realtor<br></br><br></br>
+
+                And choose the metrics you want: <br></br>
+                - Sales by quantity<br></br>
+                - Sales by amount<br></br>
+              </Typography>
+            </Grid>
+          </Grid>
+          <br></br><br></br>
+          <Grid container className={classes.largeGrid}>
+            <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight: "30px"}}>
+              <Typography variant="body2" color="textPrimary" style={{maxWidth:"748px"}}>Manage your listings by exploring this feature:<br></br><br></br>
+          - Add listings with all characteristics and photos<br></br>
+          - Quiclky assign the listings to a realtor<br></br>
+          - Manage the status of your listings: active, inactive, sold<br></br>
+          - Easily edit and delete your listings<br></br>
+          - Add your sales to automatically update your charts<br></br>
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Typography variant="h4" color="primary" className={classes.titlesRight}>Listings</Typography>
+              <div className={classes.listImg}></div>
+            </Grid>
+          </Grid>
+          <br></br>
+          <Grid container className={classes.smallGrid}>
+            <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
+              <Typography variant="h4" color="primary">Listings</Typography>
+              <div className={classes.listImg}></div>
+            </Grid>
+            <Grid className={classes.description} item xs={12} sm={12} md={12} lg={6} xl={6}>
+              <Typography variant="body2" color="textPrimary" style={{maxWidth:"748px"}}>Manage your listings by exploring this feature:<br></br><br></br>
+              - Add listings with all characteristics and photos<br></br>
+              - Quiclky assign the listings to a realtor<br></br>
+              - Manage the status of your listings: active, inactive, sold<br></br>
+              - Easily edit and delete your listings<br></br>
+              - Add your sales to automatically update your charts<br></br>
+              </Typography>
+            </Grid>
+          </Grid>
+          <br></br> <br></br>
+          <Grid container>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight: "30px"}}>
+              <Typography variant="h4" color="primary">Realtors</Typography>
+              <div className={classes.realImg}></div>
+            </Grid>
+            <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Typography variant="body2" color="textPrimary" style={{maxWidth:"748px"}}>Manage your realtors efficiently by exploring this feature:<br></br><br></br>
+              - Add realtors with their photo and information<br></br>
+              - View recent houses assigned to a realtor<br></br>
+              - Easily edit and delete realtors<br></br>
+              - Quicly search a specific realtor in your list<br></br>
+              - View all the information about your realtors<br></br>
+              </Typography>
+            </Grid>
+          </Grid>
         </div>
       </div>
-      <Grid container>
-        <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-          <h2 className={classes.titles}>Dashboard</h2>
-          <div className={classes.dashImg}></div>
-        </Grid>
-        <Grid className={classes.description} item xs={12} sm={12} md={12} lg={6} xl={6}>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar ligula vel justo pharetra ornare. Nullam sollicitudin molestie felis quis pulvinar. Nullam ut nunc at nulla pulvinar fringilla. Etiam porttitor vestibulum enim nec tincidunt. Morbi et libero augue. Donec a lacus eu sem eleifend tristique sit amet sed risus. Duis rhoncus, nulla sed rhoncus maximus, arcu leo dictum turpis, ac porta leo justo nec leo. Etiam non arcu semper, malesuada lorem nec, pharetra sapien. Integer id efficitur lectus. Nulla velit nisi, varius eget accumsan id, pellentesque ac justo. Sed porttitor commodo urna, sed efficitur eros commodo sed. Cras tincidunt felis id mauris auctor, at placerat tellus tempor. Etiam non lorem venenatis dui ultrices placerat vel sed purus.</p>
-        </Grid>
-      </Grid>
-      <br></br>
-      <Grid container>
-        <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6}>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar ligula vel justo pharetra ornare. Nullam sollicitudin molestie felis quis pulvinar. Nullam ut nunc at nulla pulvinar fringilla. Etiam porttitor vestibulum enim nec tincidunt. Morbi et libero augue. Donec a lacus eu sem eleifend tristique sit amet sed risus. Duis rhoncus, nulla sed rhoncus maximus, arcu leo dictum turpis, ac porta leo justo nec leo. Etiam non arcu semper, malesuada lorem nec, pharetra sapien. Integer id efficitur lectus. Nulla velit nisi, varius eget accumsan id, pellentesque ac justo. Sed porttitor commodo urna, sed efficitur eros commodo sed. Cras tincidunt felis id mauris auctor, at placerat tellus tempor. Etiam non lorem venenatis dui ultrices placerat vel sed purus.</p>
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-        <h2 className={classes.titles}>Listings</h2>
-          <div className={classes.listImg}></div>
-        </Grid>
-      </Grid>
-      <br></br>
-      <Grid container>
-        <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-        <h2 className={classes.titles}>Realtors</h2>
-          <div className={classes.realImg}></div>
-        </Grid>
-        <Grid className={classes.description} item xs={12} sm={12} md={12} lg={6} xl={6}>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar ligula vel justo pharetra ornare. Nullam sollicitudin molestie felis quis pulvinar. Nullam ut nunc at nulla pulvinar fringilla. Etiam porttitor vestibulum enim nec tincidunt. Morbi et libero augue. Donec a lacus eu sem eleifend tristique sit amet sed risus. Duis rhoncus, nulla sed rhoncus maximus, arcu leo dictum turpis, ac porta leo justo nec leo. Etiam non arcu semper, malesuada lorem nec, pharetra sapien. Integer id efficitur lectus. Nulla velit nisi, varius eget accumsan id, pellentesque ac justo. Sed porttitor commodo urna, sed efficitur eros commodo sed. Cras tincidunt felis id mauris auctor, at placerat tellus tempor. Etiam non lorem venenatis dui ultrices placerat vel sed purus.</p>
-        </Grid>
-      </Grid>
     </div>
   );
 }
