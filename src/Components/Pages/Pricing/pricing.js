@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button, Card, CardActions, CardContent, CardHeader, CssBaseline, Grid, Typography, Container } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { Button, Card, CardActions, CardContent, CardHeader, CssBaseline, Grid, Typography, Container, makeStyles } from '@material-ui/core';
 import PricingImg from "./assets/pricing.jpg";
 import { Link } from 'react-router-dom';
 
@@ -160,3 +159,5 @@ export default function Pricing() {
     </React.Fragment>
   );
 }
+
+// References: Material UI - https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/pricing
