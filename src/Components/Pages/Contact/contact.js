@@ -9,11 +9,12 @@ import CircleImg from "./assets/Contact_Shape.png";
 
 function Contact() {
     return (
+
         <div className="wrapContact">
-            
-           <h1>Contact Us</h1>
-           
+            <div className="contact_header">
+
             </div>
+
             <div className="contact">
                 <Typography variant="h2" className="contact_heading">
                     CONTACT US
@@ -42,8 +43,8 @@ function Contact() {
             <div className="contact_circular_shape">
                 {/* <img src ={CircleImg}/> */}
             </div>
-        </div>)
         </div>
+
     );
 }
 
