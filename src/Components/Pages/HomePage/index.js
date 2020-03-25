@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
-import heroImage from "./assets/home-hero-image.png";
+import heroImage from "./assets/home-hero-image.jpg";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import CircularImageCard from "../../Layout/CircularImageCard";
@@ -38,7 +38,8 @@ const useStyles = makeStyles(theme => ({
   },
   link: {
     textDecoration: 'none',
-    color: '#ffffff'
+    color: '#ffffff',
+    width: "100%",
   },
   outContainer: {
     position: "relative",

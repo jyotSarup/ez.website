@@ -6,10 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Logo from "./assets/logo.png";
-import {
-  Link
-} from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles(theme => ({
@@ -39,6 +36,7 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
     color: '#2B879E',
     fontSize: "16px",
+    width: "100%"
   },
   button: {
     color: 'white',

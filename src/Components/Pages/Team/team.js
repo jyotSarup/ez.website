@@ -1,9 +1,28 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import TeamImg from "./assets/team.png";
+import TeamImg from "./assets/team.jpg";
 import Grid from "@material-ui/core/Grid";
 import CircularImageCard from "../../Layout/CircularImageCard";
 import Typography from '@material-ui/core/Typography';
+
+const useStyles = makeStyles({
+    root: {
+        position: "relative",
+      },
+    wrap: {
+        backgroundImage: `url(${TeamImg})`,
+        height: "32vh",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        position: "relative",
+        textAlign: "center",
+        color: "#fff",
+        padding: "auto",
+        marginBottom: "60px",
+        paddingTop: "10vh",
+    },
+});
 
 export default function Team() {
     const classes = useStyles();
@@ -107,22 +126,3 @@ export default function Team() {
 
     );
 }
-
-const useStyles = makeStyles({
-    root: {
-        position: "relative",
-      },
-    wrap: {
-        backgroundImage: `url(${TeamImg})`,
-        height: "32vh",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        position: "relative",
-        textAlign: "center",
-        color: "#fff",
-        padding: "auto",
-        marginBottom: "60px",
-        paddingTop: "10vh",
-    },
-});
