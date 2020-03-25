@@ -13,7 +13,6 @@ const theme = createMuiTheme({
       '@media (max-width:1200px)': {
         fontSize: '28px',
       },
-      color: "#2B879E"
     },
     h4: {
       fontSize: "2.7vw",

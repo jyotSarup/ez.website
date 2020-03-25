@@ -1,6 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+import { makeStyles, Grid, Typography } from '@material-ui/core';
 import ServicesImg from "./assets/services.jpg";
 import ServicesDashboard from "./assets/services_dash.jpg";
 import ServicesListings from "./assets/services_listings.jpg";
@@ -8,7 +7,7 @@ import ServicesRealtors from "./assets/services_realtors.jpg";
 import ServicesBall1 from "./assets/services_ball1.png";
 import ServicesBall2 from "./assets/services_ball2.png";
 import ServicesBall3 from "./assets/services_ball3.png";
-import Typography from '@material-ui/core/Typography';
+
 
 const useStyles = makeStyles(theme => ({
   root: {

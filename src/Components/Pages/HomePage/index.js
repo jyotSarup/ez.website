@@ -1,12 +1,8 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core/styles";
+import { Button, makeStyles, Grid, Container, Typography } from '@material-ui/core';
 import heroImage from "./assets/home-hero-image.jpg";
-import Grid from "@material-ui/core/Grid";
-import Container from "@material-ui/core/Container";
 import CircularImageCard from "../../Layout/CircularImageCard";
 import BackImg from "./assets/backImg.png";
-import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 
 
