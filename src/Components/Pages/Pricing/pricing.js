@@ -71,7 +71,7 @@ const tiers = [
   {
     title: 'Basic',
     subheader: 'Most popular',
-    price: '15',
+    price: '25',
     description: [
       '10 users included',
       '20 GB of storage',
@@ -81,7 +81,7 @@ const tiers = [
   },
   {
     title: 'Pro',
-    price: '30',
+    price: '50',
     description: [
       '30 users included',
       '50 GB of storage',
@@ -91,7 +91,7 @@ const tiers = [
   },
   {
     title: 'Custom',
-    price: '50',
+    price: '75',
     description: [
       'Unlimited users',
       '200 GB of storage',
