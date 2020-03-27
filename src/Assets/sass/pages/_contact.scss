@@ -12,7 +12,8 @@ $primary-teal-blue: #2B879E 	;
 
   //align-items: center;
   .contact_header {
-    background-image: url(../../../Components/Pages/Contact/assets/Contact.png);
+    height: 32vh;
+    background-image: url(../../../Components/Pages/Contact/assets/contact.jpg);
     background-size: cover;
     grid-row: 1 / 2;
     grid-column: 1 / 5;
@@ -82,7 +83,7 @@ $primary-teal-blue: #2B879E 	;
     background-repeat: no-repeat;
     background-size: contain;
     //left: 30px;
-    bottom: 1em;
+    bottom: 0;
     height: 382px;
     //top: 70px;
     background-position: center;

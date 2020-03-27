@@ -18,7 +18,9 @@ const useStyles = makeStyles(theme => ({
       display: 'none',
     },
     backgroundColor: "#ffffff",
-    height: "70px"
+    height: "70px",
+    width: "85%",
+    margin: "auto",
   },
   toolbar: {
     flexWrap: 'wrap',
@@ -39,7 +41,8 @@ const useStyles = makeStyles(theme => ({
     '&:hover': {
       background: "white",
       color: '#2B879E'
-  },
+    },
+    marginLeft: "24px",
   },
   logoLink: {
     backgroundImage: `url(${Logo})`,
@@ -55,7 +58,7 @@ export default function HeaderBar() {
     <React.Fragment>
       <CssBaseline />
       <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
-        <Toolbar style={{marginTop: "3px"}}>
+        <Toolbar style={{ marginTop: "3px" }}>
           <Typography noWrap className={classes.toolbarTitle}>
             <Link variant="button" to="/"><div className={classes.logoLink}></div>
             </Link>
@@ -64,13 +67,13 @@ export default function HeaderBar() {
             <Link variant="subtitle1" className={classes.link} to="/Services">
               Services
             </Link>
-            <Link variant="subtitle1"  href="#" className={classes.link} to="/Pricing">
+            <Link variant="subtitle1" href="#" className={classes.link} to="/Pricing">
               Pricing
             </Link>
-            <Link variant="button"  href="#" className={classes.link} to="/Team">
+            <Link variant="button" href="#" className={classes.link} to="/Team">
               Team
             </Link>
-            <Link variant="button"  href="#" className={classes.link} to="/Contact">
+            <Link variant="button" href="#" className={classes.link} to="/Contact">
               Contact
             </Link>
           </nav>
