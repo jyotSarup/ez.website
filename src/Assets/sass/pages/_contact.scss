@@ -42,7 +42,7 @@ $primary-teal-blue: #2B879E 	;
       box-shadow: 3px 3px 5px #9b9a9a;
       margin-top: 1em;
       // height: 100em;
-      padding: 1.8em;
+      padding: 2.8em;
       .contact_label {
         color: black;
         margin-top: 1em;
@@ -51,11 +51,14 @@ $primary-teal-blue: #2B879E 	;
         //font-size: 2.2em;
       }
       .contact_input {
-        margin-top: 1em;
+        margin-top: 0.3em;
         width: 100%;
         padding: 0em;
         //margin-left: 1em;
         //margin-right: 4em;
+        :focus{
+          border: none;
+        }
       }
       .contact_button {
         background-color: $primary-teal-blue;
@@ -64,8 +67,12 @@ $primary-teal-blue: #2B879E 	;
         font-size: 1.333em;
         font-weight: bold;
         padding: 6px 16px;
-        border: 3px solid $primary-teal-blue;
-        margin-top: 1rem;
+        //border: 3px solid $primary-teal-blue;
+        margin-top: 1.3em;
+        transition: all .5 ease-in-out;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: none !important;
         //margin-left: 4rem;
         // margin: auto !important;
         text-transform: capitalize;
@@ -115,9 +122,10 @@ $primary-teal-blue: #2B879E 	;
         grid-column: 1fr !important;
         width: 100%;
         grid-row: 1 / 4;
-        border-radius: 15px;
-        border: 1px Solid black;
-        box-shadow: none;
+        border: 2px solid white;
+        border-radius: 5px;
+        //z-index: -1;
+        box-shadow: 3px 3px 5px #9b9a9a;
         margin-top: 2em;
       }
     }
@@ -127,7 +135,7 @@ $primary-teal-blue: #2B879E 	;
         position: absolute;
         z-index: -1;
         right: 155px;
-        bottom: 10px;
+        bottom: 0px;
       }
     
   }
@@ -155,20 +163,22 @@ $primary-teal-blue: #2B879E 	;
         grid-column: 1fr !important;
         width: 100%;
         grid-row: 1 / 4;
-        border-radius: 15px;
-        border: 1px Solid black;
-        box-shadow: none;
+        border: 2px solid white;
+        border-radius: 5px;
+        //z-index: -1;
+        box-shadow: 3px 3px 5px #9b9a9a;
         margin-top: 2em;
         
       }
     }
       .contact_circular_shape{
+        //display: none !important;
         height: 120px !important;
         grid-row: 5 / 6;
         position: absolute;
         z-index: -1;
-        right: 155px;
-        bottom: 10px;
+        right: 255px;
+        bottom: 0px;
       }
     
   }
