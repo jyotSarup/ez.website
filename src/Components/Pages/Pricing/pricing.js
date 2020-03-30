@@ -47,7 +47,11 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "bold",
     textTransform: "capitalize",
     display: "block",
-    width: "100%"
+    width: "100%",
+    fontSize: "22px",
+    '@media (max-width:900px)': {
+      fontSize: '18px',
+    },
   },
   descCard: {
     textAlign: "center",
@@ -111,7 +115,7 @@ export default function Pricing() {
       <div className={classes.outContainer}>
         <div className={classes.wrap} >
           <Typography variant="h4">PRICING</Typography>
-          <Typography variant="subtitle1">Plans for all companies <br /> Choose the best for your business</Typography>
+          <Typography variant="subtitle1">Plans for all companies. Choose the best for your business</Typography>
         </div>
 
         <div>
@@ -124,6 +128,7 @@ export default function Pricing() {
                       title={tier.title}
                       titleTypographyProps={{ align: 'center', variant: "h5" }}
                       className={classes.cardHeader}
+                      style={{ backgroundColor: ((tier.title === "Basic") ? '#34AAC7' : '#2B879E') }}
                     />
                     <CardContent>
                       <div className={classes.cardPricing}>
@@ -136,19 +141,19 @@ export default function Pricing() {
                       </div>
                       <ul>
                         {tier.description.map(line => (
-                          <Typography className={classes.descCard} component="li" variant="body1" align="center" key={line} color="textPrimary">
+                          <Typography className={classes.descCard} component="li" variant="body2" align="center" key={line} color="textPrimary">
                             {line}
                           </Typography>
                         ))}
                       </ul>
                     </CardContent>
-                      <CardActions>
-                        <Button style={{ width: "175px", margin: "15px auto", border: "1px solid #2B879E" }} color="primary">
-                          <Link variant="button" href="#" className={classes.link} to="/Contact">
-                            Contact Us
+                    <CardActions>
+                      <Button style={{ width: "195px", margin: "15px auto", border: "1px solid #2B879E" }} color="primary">
+                        <Link variant="button" href="#" className={classes.link} to="/Contact">
+                          Contact Us
                         </Link>
-                        </Button>
-                      </CardActions>
+                      </Button>
+                    </CardActions>
                   </Card>
                 </Grid>
               ))}

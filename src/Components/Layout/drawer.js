@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { Drawer, AppBar, Toolbar,CssBaseline, List, Typography, IconButton, ListItem, ListItemText, makeStyles, useTheme } from '@material-ui/core';
+import { Drawer, AppBar, Toolbar, CssBaseline, List, Typography, IconButton, ListItem, ListItemText, makeStyles, useTheme } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import LogoMobile from "./assets/logoMobile.png";
@@ -70,7 +70,7 @@ const useStyles = makeStyles(theme => ({
         backgroundRepeat: "no-repeat",
         height: "51px",
         marginTop: "10px"
-      }
+    }
 }));
 
 export default function PersistentDrawerRight() {
@@ -106,7 +106,7 @@ export default function PersistentDrawerRight() {
                         edge="end"
                         onClick={handleDrawerOpen}
                         className={clsx(open && classes.hide)}
-                        style={{color: "#2B879E"}}
+                        style={{ color: "#2B879E" }}
                     >
                         <MenuIcon />
                     </IconButton>
@@ -128,7 +128,7 @@ export default function PersistentDrawerRight() {
                 }}
             >
                 <div className={classes.drawerHeader}>
-                    <IconButton onClick={handleDrawerClose} style={{color: "#2B879E" }}>
+                    <IconButton onClick={handleDrawerClose} style={{ color: "#2B879E" }}>
                         {theme.direction === 'rtl' ? <CloseIcon /> : <CloseIcon />}
                     </IconButton>
                 </div>
@@ -140,10 +140,10 @@ export default function PersistentDrawerRight() {
                         <Link className={classes.drawerNav} to="/Team">Team</Link>,
                         <Link className={classes.drawerNav} to="/Contact">Contact</Link>].map((text, index) => (
                             <ListItem button key={text}>
-                                {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
                                 <ListItemText primary={text} />
                             </ListItem>
                         ))}
+                    <a className={classes.drawerNav} style={{padding: "8px 16px", fontWeight: "bold"}} href="http://admin.easyrealtysystem.wmdd.ca/">LOGIN</a>
                 </List>
             </Drawer>
         </div>

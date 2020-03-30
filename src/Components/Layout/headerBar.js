@@ -32,8 +32,11 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(1, 3),
     textDecoration: 'none',
     color: '#2B879E',
-    fontSize: "16px",
-    width: "100%"
+    width: "100%",
+    fontSize: "22px",
+    '@media (max-width:900px)': {
+      fontSize: '18px',
+    },
   },
   button: {
     color: 'white',
@@ -43,6 +46,12 @@ const useStyles = makeStyles(theme => ({
       color: '#2B879E'
     },
     marginLeft: "24px",
+    textTransform: "capitalize",
+    fontWeight: "bold",
+    fontSize: "22px",
+    '@media (max-width:900px)': {
+      fontSize: '18px',
+    },
   },
   logoLink: {
     backgroundImage: `url(${Logo})`,

@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
     backgroundRepeat: "no-repeat",
     backgroundPosition: "left",
     backgroundSize: "contain",
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'auto',
     },
     [theme.breakpoints.down('sm')]: {
@@ -64,7 +64,7 @@ const useStyles = makeStyles(theme => ({
     maxHeight: "424px",
     minHeight: "169px",
     marginLeft: "-8px",
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'auto',
     },
     [theme.breakpoints.down('sm')]: {
@@ -82,7 +82,7 @@ const useStyles = makeStyles(theme => ({
     maxHeight: "424px",
     minHeight: "169px",
     marginLeft: "-8px",
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'auto',
     },
     [theme.breakpoints.down('sm')]: {
@@ -163,6 +163,12 @@ const useStyles = makeStyles(theme => ({
       display: 'none',
     }
   },
+  leftImgs: {
+    paddingRight: "30px",
+    [theme.breakpoints.down('md')]: {
+      paddingRight: "0",
+    },
+  }
 }));
 
 export default function Services() {
@@ -180,13 +186,13 @@ export default function Services() {
         </div>
         <div className={classes.wrapServices}>
           <Grid container>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight: "30px"}}>
+            <Grid className={classes.leftImgs} item xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight: "30px"}}>
               <Typography variant="h4" color="primary">Dashboard</Typography>
               <div className={classes.dashImg}></div>
             </Grid>
             <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Typography variant="body2" color="textPrimary" >
-                Find dinamic charts that to analyse your business over time:<br></br><br></br>
+                Find dinamic charts that to analyse your business over time:<br></br>
                 - Sales by type of property<br></br>
                 - Sales by realtor<br></br><br></br>
 
@@ -198,10 +204,10 @@ export default function Services() {
           </Grid>
           <br></br><br></br>
           <Grid container className={classes.largeGrid}>
-            <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight: "30px"}}>
-              <Typography variant="body2" color="textPrimary" style={{maxWidth:"748px"}}>Manage your listings by exploring this feature:<br></br><br></br>
+            <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Typography variant="body2" color="textPrimary" style={{maxWidth:"748px", paddingRight: "30px"}}>Manage your listings by exploring this feature:<br></br>
           - Add listings with all characteristics and photos<br></br>
-          - Quiclky assign the listings to a realtor<br></br>
+          - Quiclky assign the listing to a realtor<br></br>
           - Manage the status of your listings: active, inactive, sold<br></br>
           - Easily edit and delete your listings<br></br>
           - Add your sales to automatically update your charts<br></br>
@@ -219,7 +225,7 @@ export default function Services() {
               <div className={classes.listImg}></div>
             </Grid>
             <Grid className={classes.description} item xs={12} sm={12} md={12} lg={6} xl={6}>
-              <Typography variant="body2" color="textPrimary" style={{maxWidth:"748px"}}>Manage your listings by exploring this feature:<br></br><br></br>
+              <Typography variant="body2" color="textPrimary" style={{maxWidth:"748px"}}>Manage your listings by exploring this feature:<br></br>
               - Add listings with all characteristics and photos<br></br>
               - Quiclky assign the listings to a realtor<br></br>
               - Manage the status of your listings: active, inactive, sold<br></br>
@@ -228,16 +234,16 @@ export default function Services() {
               </Typography>
             </Grid>
           </Grid>
-          <br></br> <br></br>
+          <br></br> <br></br><br></br>
           <Grid container>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight: "30px"}}>
+            <Grid className={classes.leftImgs} item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Typography variant="h4" color="primary">Realtors</Typography>
               <div className={classes.realImg}></div>
             </Grid>
             <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6}>
-              <Typography variant="body2" color="textPrimary" style={{maxWidth:"748px"}}>Manage your realtors efficiently by exploring this feature:<br></br><br></br>
+              <Typography variant="body2" color="textPrimary" style={{maxWidth:"748px"}}>Manage your realtors efficiently by exploring this feature:<br></br>
               - Add realtors with their photo and information<br></br>
-              - View recent houses assigned to a realtor<br></br>
+              - View houses assigned to a realtor<br></br>
               - Easily edit and delete realtors<br></br>
               - Quicly search a specific realtor in your list<br></br>
               - View all the information about your realtors<br></br>
