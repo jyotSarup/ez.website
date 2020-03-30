@@ -2,11 +2,12 @@ import React from "react";
 import { makeStyles, Grid, Typography } from '@material-ui/core';
 import TeamImg from "./assets/team.jpg";
 import CircularImageCard from "../../Layout/CircularImageCard";
+import { useEffect } from 'react';
 
 const useStyles = makeStyles({
     root: {
         position: "relative",
-      },
+    },
     wrap: {
         backgroundImage: `url(${TeamImg})`,
         height: "32vh",
@@ -24,6 +25,9 @@ const useStyles = makeStyles({
 
 export default function Team() {
     const classes = useStyles();
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const teamCard = [
         {
@@ -44,7 +48,7 @@ export default function Team() {
             title: "Jyot",
             link: "jyotsarupkaur",
             detail: "Full Stack Developer",
-            info: '"I am graduated in Information Technology with 3+ years of experience as full-stack developer. Familiar with back-end languages such as c#, NodeJS and modern JavaScript front-end frameworks such as React and Vue."',
+            info: '"I am a web and mobile application developer with 3+ years of industry experience. I am in this industry because I have always had keen interest in critical thinking and analysis. My goal is to keep doing this by developing business solutions."',
             imgThumb: "jyot.png"
         },
         {
@@ -65,14 +69,14 @@ export default function Team() {
             title: "Saebeyol",
             link: "saebyeolpak",
             detail: "Front-end Developer",
-            info: '"I worked as a UI designer for three years and experienced projects using HTML, CSS and jQuery. I love to learn new technology and keep track of lessons learned!""',
+            info: '"I worked as a UI designer for three years and experienced projects using HTML, CSS and jQuery. I love to learn new technology and keep track of lessons learned!"',
             imgThumb: "saebyeol.png"
         },
         {
             title: "Sweera",
             link: "sweerachahal",
             detail: "Front-end Developer",
-            info: '"I am a computer Science engineering graduate who is passionate about creating new things from a scratch."',
+            info: '"I graduated as a Computer Science Engineer from India and decided to follow my passion of front end development in my higher studies. I love learning about new technologies and creating web applications from a scratch."',
             imgThumb: "sweera.png"
         },
         {
@@ -115,7 +119,7 @@ export default function Team() {
                 style={{ width: "85%", margin: "auto", textAlign: "-webkit-center", alignItems: "start", paddingBottom: "40px" }}
             >
                 {teamCard.map(item => (
-                    <Grid item key={item.title} xs={12} sm={12} md={6} lg={6} xl={6} style={{padding: "10px"}}>
+                    <Grid item key={item.title} xs={12} sm={12} md={6} lg={6} xl={6} style={{ padding: "10px" }}>
                         <CircularImageCard
                             title={item.title}
                             detail={item.detail}
