@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { Drawer, AppBar, Toolbar, CssBaseline, List, Typography, IconButton, ListItem, ListItemText, makeStyles, useTheme } from '@material-ui/core';
+import { Drawer, AppBar, Toolbar, CssBaseline, Typography, IconButton, ListItem, makeStyles, useTheme } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import LogoMobile from "./assets/logoMobile.png";
@@ -73,8 +73,18 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
+
 export default function PersistentDrawerRight() {
     const classes = useStyles();
+
+    const pages = [
+        <Link className={classes.drawerNav} to="/">Home</Link>,
+        <Link className={classes.drawerNav} to="/Services">Services</Link>,
+        <Link className={classes.drawerNav} to="/Pricing">Pricing</Link>,
+        <Link className={classes.drawerNav} to="/Team">Team</Link>,
+        <Link className={classes.drawerNav} to="/Contact">Contact</Link>];
+    
+
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
 
@@ -132,19 +142,14 @@ export default function PersistentDrawerRight() {
                         {theme.direction === 'rtl' ? <CloseIcon /> : <CloseIcon />}
                     </IconButton>
                 </div>
-                <List onClick={handleDrawerClose}>
-                    {[
-                        <Link className={classes.drawerNav} to="/">Home</Link>,
-                        <Link className={classes.drawerNav} to="/Services">Services</Link>,
-                        <Link className={classes.drawerNav} to="/Pricing">Pricing</Link>,
-                        <Link className={classes.drawerNav} to="/Team">Team</Link>,
-                        <Link className={classes.drawerNav} to="/Contact">Contact</Link>].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemText primary={text} />
+                <div onClick={handleDrawerClose}>
+                    {pages.map((text, index) => (
+                            <ListItem key={index}>
+                              {text}
                             </ListItem>
                         ))}
                     <a className={classes.drawerNav} style={{padding: "8px 16px", fontWeight: "bold"}} href="http://admin.easyrealtysystem.wmdd.ca/">LOGIN</a>
-                </List>
+                </div>
             </Drawer>
         </div>
     );

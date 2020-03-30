@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Button, CssBaseline, Toolbar, Typography, makeStyles } from '@material-ui/core';
+import { AppBar, Button, CssBaseline, Toolbar, makeStyles } from '@material-ui/core';
 import Logo from "./assets/logo.png";
 import { Link } from 'react-router-dom';
 
@@ -57,6 +57,7 @@ const useStyles = makeStyles(theme => ({
     backgroundImage: `url(${Logo})`,
     backgroundRepeat: "no-repeat",
     height: "51px",
+    width: "210px"
   }
 }));
 
@@ -68,10 +69,10 @@ export default function HeaderBar() {
       <CssBaseline />
       <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
         <Toolbar style={{ marginTop: "3px" }}>
-          <Typography noWrap className={classes.toolbarTitle}>
+          <div className={classes.toolbarTitle}>
             <Link variant="button" to="/"><div className={classes.logoLink}></div>
             </Link>
-          </Typography>
+          </div>
           <nav>
             <Link variant="subtitle1" className={classes.link} to="/Services">
               Services
