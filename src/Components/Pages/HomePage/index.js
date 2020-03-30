@@ -48,6 +48,22 @@ const useStyles = makeStyles(theme => ({
   },
   homeContentGrid: {
     display: "grid"
+  },
+  button: {
+    width: "197px",
+    color: 'white',
+    backgroundColor: '#2B879E',
+    '&:hover': {
+      background: "white",
+      color: '#2B879E'
+    },
+    textTransform: "capitalize",
+    fontWeight: "bold",
+    fontSize: "22px",
+    padding: "6px 0",
+    '@media (max-width:900px)': {
+      fontSize: '18px',
+    },
   }
 }));
 
@@ -85,8 +101,8 @@ export default function HomePage() {
 
             <br></br>
 
-            <Button variant="contained" color="primary" href="#contained-buttons" style={{ width: "197px", textTransform: "capitalize", fontWeight: "bold", padding: "6px 0" }}>
-              <Link className={classes.link} to="/Pricing">Get Started</Link>
+            <Button className={classes.button} component={Link} to="/Pricing" variant="contained" color="primary" href="#contained-buttons">
+              Get Started
             </Button>
 
           </div>
@@ -111,9 +127,9 @@ export default function HomePage() {
               style={{ width: "100%", margin: "auto", textAlign: "-webkit-center" }}
             >
               {homepageServicesCard.map(item => (
-                <Grid xs={12} sm={12} md={3} lg={3} xl={3}>
+                <Grid item key={item.title} xs={12} sm={12} md={3} lg={3} xl={3}>
                   <CircularImageCard
-                    key={item.title}
+                    //key={item.title}
                     title={item.title}
                     detail={item.detail}
                     imgThumb={item.imgThumb}

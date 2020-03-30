@@ -115,9 +115,8 @@ export default function Team() {
                 style={{ width: "85%", margin: "auto", textAlign: "-webkit-center", alignItems: "start", paddingBottom: "40px" }}
             >
                 {teamCard.map(item => (
-                    <Grid xs={12} sm={12} md={6} lg={6} xl={6} style={{padding: "10px"}}>
+                    <Grid item key={item.title} xs={12} sm={12} md={6} lg={6} xl={6} style={{padding: "10px"}}>
                         <CircularImageCard
-                            key={item.title}
                             title={item.title}
                             detail={item.detail}
                             info={item.info}

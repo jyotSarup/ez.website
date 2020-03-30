@@ -99,10 +99,10 @@ export default function Footer() {
                 </div>
                 <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
                     <Toolbar className={classes.barFooter} style={{ marginTop: "3px", padding: "0" }}>
-                        <Typography noWrap className={classes.toolbarTitle}>
-                            <Link variant="button" to="/"><div className={classes.logoLink}></div>
+                        <div className={classes.toolbarTitle}>
+                            <Link variant="button" to="/" className={classes.logoLink}><div className={classes.logoLink}></div>
                             </Link>
-                        </Typography>
+                        </div>
                             <div><span style={{ fontSize: "16px" }}>&copy; {new Date().getFullYear()} Easy Realty System</span></div>
                     </Toolbar>
                 </AppBar>

@@ -18,7 +18,7 @@ class CircularImageCard extends React.Component {
                 color="textPrimary"
                 style={{ textAlign: "center", paddingTop: "20px", paddingBottom: "0" }}
               >
-                <span class="spanLink">{this.props.title}</span> <span class="spanLink"><a href={"https://www.linkedin.com/in/" + (this.props.link)}><img className="linkedinImg" src={require("../../Assets/imgs/linkedin.png")} alt={'linkedin icon'}></img></a></span>
+                <span className="spanLink">{this.props.title}</span> <span className="spanLink"><a href={"https://www.linkedin.com/in/" + (this.props.link)}><img className="linkedinImg" src={require("../../Assets/imgs/linkedin.png")} alt={'linkedin icon'}></img></a></span>
               </Typography>
               <Typography variant="body2" color="textPrimary" component="p">{this.props.detail}</Typography>
               <br></br>
