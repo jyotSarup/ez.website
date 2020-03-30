@@ -36,6 +36,10 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
     color: '#ffffff',
     width: "100%",
+    fontSize: "22px",
+    '@media (max-width:900px)': {
+      fontSize: '18px',
+    },
   },
   outContainer: {
     position: "relative",
@@ -81,7 +85,7 @@ export default function HomePage() {
 
             <br></br>
 
-            <Button variant="contained" color="primary" href="#contained-buttons" style={{ width: "197px", textTransform: "capitalize", fontWeight: "bold" }}>
+            <Button variant="contained" color="primary" href="#contained-buttons" style={{ width: "197px", textTransform: "capitalize", fontWeight: "bold", padding: "6px 0" }}>
               <Link className={classes.link} to="/Pricing">Get Started</Link>
             </Button>
 

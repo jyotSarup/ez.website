@@ -31,9 +31,6 @@ const useStyles = makeStyles(theme => ({
         height: "70px",
         padding: "0 10%"
     },
-    toolbarTitle: {
-        flexGrow: 1,
-    },
     logoLink: {
         backgroundImage: `url(${Logo})`,
         [theme.breakpoints.down('sm')]: {
@@ -42,6 +39,7 @@ const useStyles = makeStyles(theme => ({
         },
         backgroundRepeat: "no-repeat",
         height: "51px",
+        width: "210px",
     },
     email: {
         [theme.breakpoints.down('sm')]: {
@@ -54,7 +52,7 @@ const useStyles = makeStyles(theme => ({
         height: "40px",
         width: "320px",
         borderRadius: "4px",
-        fontSize: "20px",
+        fontSize: "16px",
         fontStyle: "italic",
         paddingLeft: "10px",
         [theme.breakpoints.down('sm')]: {
@@ -77,7 +75,11 @@ const useStyles = makeStyles(theme => ({
             width: "94px",
             fontSize: "16px"
         },
-    }
+    },
+    barFooter: {
+        display: "flex",
+        justifyContent: "space-between"
+    },
 }));
 
 export default function Footer() {
@@ -87,8 +89,8 @@ export default function Footer() {
             <div className={classes.footerWrap}>
                 <div className={classes.newsLetterContent}>
                     <div>
-                        <Typography variant="subtitle1">Subscribe to our newsletter</Typography>
-                        <Typography variant="body1">To get tips about how to be a better manager</Typography>
+                        <Typography variant="h2">Subscribe to our newsletter</Typography>
+                        <Typography variant="body2">To get tips about how to be a better manager</Typography>
                     </div>
                     <div style={{ display: "flex" }} className={classes.email}>
                         <input className={classes.input} type="text" placeholder="Your Email"></input>
@@ -96,12 +98,12 @@ export default function Footer() {
                     </div>
                 </div>
                 <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
-                    <Toolbar style={{ marginTop: "3px", padding: "0" }}>
+                    <Toolbar className={classes.barFooter} style={{ marginTop: "3px", padding: "0" }}>
                         <Typography noWrap className={classes.toolbarTitle}>
                             <Link variant="button" to="/"><div className={classes.logoLink}></div>
                             </Link>
                         </Typography>
-                            <span style={{ fontSize: "16px" }}>&copy; {new Date().getFullYear()} Easy Realty System</span>
+                            <div><span style={{ fontSize: "16px" }}>&copy; {new Date().getFullYear()} Easy Realty System</span></div>
                     </Toolbar>
                 </AppBar>
             </div>

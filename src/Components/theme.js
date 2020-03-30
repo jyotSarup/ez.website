@@ -31,10 +31,10 @@ const theme = createMuiTheme({
       paddingBottom: "10px"
     },
     subtitle1: {
-      fontSize: "1.4vw",
+      fontSize: "22px",
       fontWeight: "600",
       '@media (max-width:900px)': {
-        fontSize: '16px',
+        fontSize: '18px',
       },
       paddingBottom: "10px"
     },
@@ -48,8 +48,8 @@ const theme = createMuiTheme({
     body2: {
       fontSize: "22px",
       fontWeight: "400",
-      '@media (max-width:1200px)': {
-        fontSize: '16px',
+      '@media (max-width:900px)': {
+        fontSize: '18px',
       },
     },
   },
