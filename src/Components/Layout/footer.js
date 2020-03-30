@@ -15,9 +15,7 @@ const useStyles = makeStyles(theme => ({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: "2%",
-        paddingLeft: "10%",
-        paddingRight: "10%",
+        padding: "2% 8%",
         backgroundColor: "#2B879E",
         color: "white",
         [theme.breakpoints.down('sm')]: {
@@ -29,7 +27,12 @@ const useStyles = makeStyles(theme => ({
         borderBottom: `1px solid ${theme.palette.divider}`,
         backgroundColor: "#ffffff",
         height: "70px",
-        padding: "0 10%"
+        width: "85%",
+        '@media (max-width:1200px)': {
+          width: "93%",
+        },
+        margin: "auto",
+        //padding: "0 10%"
     },
     logoLink: {
         backgroundImage: `url(${Logo})`,
@@ -63,6 +66,10 @@ const useStyles = makeStyles(theme => ({
     sendBtn: {
         backgroundColor: "white",
         color: "#2B879E",
+        '&:hover': {
+            background: "#34AAC7",
+            color: 'white'
+          },
         boxShadow: "none",
         padding: "2px 16px",
         border: "none",

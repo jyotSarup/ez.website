@@ -7,6 +7,7 @@ import ServicesRealtors from "./assets/services_realtors.jpg";
 import ServicesBall1 from "./assets/services_ball1.png";
 import ServicesBall2 from "./assets/services_ball2.png";
 import ServicesBall3 from "./assets/services_ball3.png";
+import { useEffect } from 'react';
 
 
 const useStyles = makeStyles(theme => ({
@@ -36,57 +37,65 @@ const useStyles = makeStyles(theme => ({
     maxWidth: "1480px"
   },
   dashImg: {
-    backgroundImage: `url(${ServicesDashboard})`,
-    width: "100%",
-    height: "39vh",
-    maxHeight: "424px",
+    height: "18vw",
+    width: "32vw",
     minHeight: "169px",
-    marginLeft: "-8px",
-    minWidth: "301px",
+    minWidth: "300px",
+    maxWidth: "755px",
+    maxHeight: "424px",
+    backgroundImage: `url(${ServicesDashboard})`,
+    borderRadius: "4px",
+    boxShadow: "-2px 2px 5px #9B9A9A",
+    marginLeft: "5px",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "left",
     backgroundSize: "contain",
     [theme.breakpoints.down('sm')]: {
-      height: 'auto',
-    },
-    [theme.breakpoints.down('sm')]: {
-      backgroundPosition: "center"
+      backgroundPosition: "center",
+      margin: "auto",
+      marginBottom: "15px"
     }
   },
   listImg: {
+    height: "18vw",
+    width: "32vw",
+    minHeight: "169px",
+    minWidth: "300px",
+    maxWidth: "755px",
+    maxHeight: "424px",
+    float: "right",
     backgroundImage: `url(${ServicesListings})`,
-    width: "100%",
-    height: "39vh",
-    minWidth: "301px",
+    borderRadius: "4px",
+    boxShadow: "-2px 2px 5px #9B9A9A",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "right",
     backgroundSize: "contain",
-    maxHeight: "424px",
-    minHeight: "169px",
     marginLeft: "-8px",
     [theme.breakpoints.down('sm')]: {
-      height: 'auto',
-    },
-    [theme.breakpoints.down('sm')]: {
-      backgroundPosition: "center"
+      backgroundPosition: "center",
+      margin: "auto",
+      marginBottom: "15px",
+      float: "none"
     }
   },
   realImg: {
+    height: "18vw",
+    width: "32vw",
+    minHeight: "169px",
+    minWidth: "300px",
+    maxWidth: "755px",
+    maxHeight: "424px",
     backgroundImage: `url(${ServicesRealtors})`,
-    width: "100%",
-    height: "39vh",
-    minWidth: "301px",
+    borderRadius: "4px",
+    boxShadow: "-2px 2px 5px #9B9A9A",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "left",
     backgroundSize: "contain",
-    maxHeight: "424px",
-    minHeight: "169px",
-    marginLeft: "-8px",
+    marginLeft: "5px",
     [theme.breakpoints.down('sm')]: {
-      height: 'auto',
-    },
-    [theme.breakpoints.down('sm')]: {
-      backgroundPosition: "center"
+      backgroundPosition: "center",
+      margin: "auto",
+      marginBottom: "15px"
     }
   },
   titlesRight: {
@@ -173,6 +182,9 @@ const useStyles = makeStyles(theme => ({
 
 export default function Services() {
   const classes = useStyles();
+  useEffect(() => {
+    window.scrollTo(0, 0)
+}, [])
 
   return (
     <div className={classes.root}>
@@ -202,7 +214,7 @@ export default function Services() {
               </Typography>
             </Grid>
           </Grid>
-          <br></br><br></br>
+          <br></br>
           <Grid container className={classes.largeGrid}>
             <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Typography variant="body2" color="textPrimary" style={{maxWidth:"748px", paddingRight: "30px"}}>Manage your listings by exploring this feature:<br></br>
@@ -234,7 +246,7 @@ export default function Services() {
               </Typography>
             </Grid>
           </Grid>
-          <br></br> <br></br><br></br>
+          <br></br> <br></br>
           <Grid container>
             <Grid className={classes.leftImgs} item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Typography variant="h4" color="primary">Realtors</Typography>

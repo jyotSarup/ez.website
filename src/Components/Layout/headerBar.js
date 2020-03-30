@@ -19,8 +19,11 @@ const useStyles = makeStyles(theme => ({
     },
     backgroundColor: "#ffffff",
     height: "70px",
-    width: "85%",
     margin: "auto",
+    width: "85%",
+    '@media (max-width:1200px)': {
+      width: "100%",
+    },
   },
   toolbar: {
     flexWrap: 'wrap',
@@ -34,7 +37,8 @@ const useStyles = makeStyles(theme => ({
     color: '#2B879E',
     width: "100%",
     fontSize: "22px",
-    '@media (max-width:900px)': {
+    fontWeight: "normal",
+    '@media (max-width:1200px)': {
       fontSize: '18px',
     },
   },
@@ -42,14 +46,14 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     backgroundColor: '#2B879E',
     '&:hover': {
-      background: "white",
-      color: '#2B879E'
+      background: "#34AAC7",
+      color: 'white'
     },
     marginLeft: "24px",
     textTransform: "capitalize",
     fontWeight: "bold",
     fontSize: "22px",
-    '@media (max-width:900px)': {
+    '@media (max-width:1200px)': {
       fontSize: '18px',
     },
   },

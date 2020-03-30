@@ -21,10 +21,9 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <div className="App">
-      
 
           <PersistentDrawerRight />
-  
+
           <HeaderBar />
 
           <Route exact path='/' component={HomePage} />

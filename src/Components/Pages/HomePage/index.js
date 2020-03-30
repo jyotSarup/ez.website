@@ -4,6 +4,7 @@ import heroImage from "./assets/home-hero-image.jpg";
 import CircularImageCard from "../../Layout/CircularImageCard";
 import BackImg from "./assets/backImg.png";
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 const useStyles = makeStyles(theme => ({
@@ -54,8 +55,8 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     backgroundColor: '#2B879E',
     '&:hover': {
-      background: "white",
-      color: '#2B879E'
+      background: '#34AAC7',
+      color: 'white'
     },
     textTransform: "capitalize",
     fontWeight: "bold",
@@ -69,6 +70,9 @@ const useStyles = makeStyles(theme => ({
 
 export default function HomePage() {
   const classes = useStyles();
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const homepageServicesCard = [
     {

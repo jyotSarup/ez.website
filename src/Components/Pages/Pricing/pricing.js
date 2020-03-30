@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Card, CardActions, CardContent, CardHeader, CssBaseline, Grid, Typography, Container, makeStyles } from '@material-ui/core';
 import PricingImg from "./assets/pricing.jpg";
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -41,9 +42,10 @@ const useStyles = makeStyles(theme => ({
     paddingTop: "10vh",
   },
   link: {
+    lineHeight: "inherit",
     margin: theme.spacing(1, 3),
     textDecoration: 'none',
-    color: '#2B879E',
+    color: "inherit",
     fontWeight: "bold",
     textTransform: "capitalize",
     display: "block",
@@ -59,6 +61,18 @@ const useStyles = makeStyles(theme => ({
     borderBottom: "1px solid #2B879E",
     width: "85%",
     margin: "auto"
+  },
+  button: {
+    lineHeight: "inherit",
+    color: "#2B879E",
+    width: "195px", 
+    margin: "auto", 
+    marginBottom: "16px",
+    border: "1px solid #2B879E",
+    '&:hover': {
+      background: "#34AAC7",
+      color: 'white'
+    },
   }
 }));
 
@@ -108,6 +122,9 @@ const tiers = [
 
 export default function Pricing() {
   const classes = useStyles();
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <React.Fragment>
@@ -148,7 +165,7 @@ export default function Pricing() {
                       </ul>
                     </CardContent>
                     <CardActions>
-                      <Button style={{ width: "195px", margin: "15px auto", border: "1px solid #2B879E" }} color="primary">
+                      <Button className={classes.button}>
                         <Link variant="button" href="#" className={classes.link} to="/Contact">
                           Contact Us
                         </Link>

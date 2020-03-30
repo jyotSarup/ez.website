@@ -15,7 +15,7 @@ const theme = createMuiTheme({
       },
     },
     h4: {
-      fontSize: "2.7vw",
+      fontSize: "44px",
       fontWeight: "800",
       '@media (max-width:900px)': {
         fontSize: '28px',
@@ -23,7 +23,7 @@ const theme = createMuiTheme({
       paddingBottom: "10px"
     },
     h2: {
-      fontSize: "1.6vw",
+      fontSize: "26px",
       fontWeight: "600",
       '@media (max-width:900px)': {
         fontSize: '22px',
@@ -58,7 +58,7 @@ const theme = createMuiTheme({
       main: "#2B879E"
     },
     secondary: {
-      main: "#ffffff",
+      main: "#34AAC7",
     },
     text: {
       primary: "#000000"
