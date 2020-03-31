@@ -129,6 +129,7 @@ $primary-teal-blue: #2B879E 	;
       }
     }
       .contact_circular_shape{
+        display: none !important;
         height: 120px !important;
         grid-row: 5 / 6;
         position: absolute;
@@ -171,7 +172,7 @@ $primary-teal-blue: #2B879E 	;
       }
     }
       .contact_circular_shape{
-        //display: none !important;
+        display: none !important;
         height: 120px !important;
         grid-row: 5 / 6;
         position: absolute;
