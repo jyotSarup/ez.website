@@ -68,7 +68,7 @@ const useStyles = makeStyles(theme => ({
     width: "195px", 
     margin: "auto", 
     marginBottom: "16px",
-    border: "1px solid #2B879E",
+    border: "2px solid #2B879E",
     '&:hover': {
       background: "#34AAC7",
       color: 'white'
@@ -84,7 +84,9 @@ const tiers = [
       '5 users included',
       '2 GB of storage',
       'Email support',
-      '1 Email account'],
+      '1 Email account'
+    ],
+    button: "Get Started"
   },
   {
     title: 'Basic',
@@ -96,6 +98,7 @@ const tiers = [
       'Priority email support',
       '10 Email accounts',
     ],
+    button: "Buy Now"
   },
   {
     title: 'Pro',
@@ -106,6 +109,7 @@ const tiers = [
       'Phone & email support',
       '30 Email accounts',
     ],
+    button: "Buy Now"
   },
   {
     title: 'Custom',
@@ -116,6 +120,7 @@ const tiers = [
       'Phone & email support',
       'Unlimited Email',
     ],
+    button: "Contact Us"
   },
 ];
 
@@ -140,7 +145,7 @@ export default function Pricing() {
             <Grid container spacing={3} alignItems="center">
               {tiers.map(tier => (
                 <Grid item key={tier.title} xs={12} sm={6} md={6} lg={3} xl={3}>
-                  <Card style={{ border: "1px solid #2B879E" }}>
+                  <Card style={{ border: ((tier.title === "Basic") ? "2px solid #34AAC7" : "2px solid #2B879E") }}>
                     <CardHeader
                       title={tier.title}
                       titleTypographyProps={{ align: 'center', variant: "h5" }}
@@ -167,7 +172,7 @@ export default function Pricing() {
                     <CardActions>
                       <Button className={classes.button}>
                         <Link variant="button" href="#" className={classes.link} to="/Contact">
-                          Contact Us
+                        {tier.button}
                         </Link>
                       </Button>
                     </CardActions>

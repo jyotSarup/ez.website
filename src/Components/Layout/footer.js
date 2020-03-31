@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
         height: "70px",
         width: "85%",
         '@media (max-width:1200px)': {
-          width: "93%",
+            width: "93%",
         },
         margin: "auto",
         //padding: "0 10%"
@@ -69,7 +69,7 @@ const useStyles = makeStyles(theme => ({
         '&:hover': {
             background: "#34AAC7",
             color: 'white'
-          },
+        },
         boxShadow: "none",
         padding: "2px 16px",
         border: "none",
@@ -85,8 +85,15 @@ const useStyles = makeStyles(theme => ({
     },
     barFooter: {
         display: "flex",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        marginTop: "3px",
+        padding: "0",
     },
+    toolbarTitle: {
+        [theme.breakpoints.down('sm')]: {
+            width: "100px",
+        },
+    }
 }));
 
 export default function Footer() {
@@ -105,12 +112,12 @@ export default function Footer() {
                     </div>
                 </div>
                 <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
-                    <Toolbar className={classes.barFooter} style={{ marginTop: "3px", padding: "0" }}>
+                    <Toolbar className={classes.barFooter}>
                         <div className={classes.toolbarTitle}>
                             <Link variant="button" to="/" className={classes.logoLink}><div className={classes.logoLink}></div>
                             </Link>
                         </div>
-                            <div><span style={{ fontSize: "16px" }}>&copy; {new Date().getFullYear()} Easy Realty System</span></div>
+                        <div><span style={{ fontSize: "16px" }}>&copy; {new Date().getFullYear()} Easy Realty System</span></div>
                     </Toolbar>
                 </AppBar>
             </div>

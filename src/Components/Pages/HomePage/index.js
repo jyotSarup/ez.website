@@ -46,7 +46,6 @@ const useStyles = makeStyles(theme => ({
     position: "relative",
     zIndex: "0",
     paddingBottom: "40px",
-    width: "100%"
   },
   homeContentGrid: {
     display: "grid"
