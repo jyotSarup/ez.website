@@ -63,7 +63,7 @@ const useStyles = makeStyles(theme => ({
     minWidth: "300px",
     maxWidth: "755px",
     maxHeight: "424px",
-    float: "right",
+    float: "left",
     backgroundImage: `url(${ServicesListings})`,
     borderRadius: "4px",
     boxShadow: "-2px 2px 5px #9B9A9A",
@@ -98,10 +98,16 @@ const useStyles = makeStyles(theme => ({
       marginBottom: "15px"
     }
   },
-  titlesRight: {
-    textAlign: "right",
-    marginRight: "8px"
+  titleListings: {
+    marginTop: "55px",
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    }
   },
+  // titlesRight: {
+  //   textAlign: "right",
+  //   marginRight: "8px"
+  // },
   description: {
     margin: "auto",
   },
@@ -159,7 +165,7 @@ const useStyles = makeStyles(theme => ({
       height: '100px',
     },
     [theme.breakpoints.down('sm')]: {
-      display: "none",
+      height: '100px',
     }
   },
   smallGrid: {
@@ -204,17 +210,19 @@ export default function Services() {
             </Grid>
             <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Typography variant="body2" color="textPrimary" >
-                Find dinamic charts that to analyse your business over time:<br></br>
-                - Sales by type of property<br></br>
+                Find dinamic charts that to analyse your business. Choose to see:<br></br>
+                - Sales by type of property OR<br></br>
                 - Sales by realtor<br></br><br></br>
 
                 And choose the metrics you want: <br></br>
-                - Sales by quantity<br></br>
+                - Sales by quantity OR<br></br>
                 - Sales by amount<br></br>
+                See statistics over time to analyse the progress of your business.
               </Typography>
             </Grid>
           </Grid>
-          <br></br>
+          <br></br> 
+          <Typography variant="h4" color="primary" className={classes.titleListings}>Listings</Typography>
           <Grid container className={classes.largeGrid}>
             <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Typography variant="body2" color="textPrimary" style={{maxWidth:"748px", paddingRight: "30px"}}>Manage your listings by exploring this feature:<br></br>
@@ -226,7 +234,7 @@ export default function Services() {
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-              <Typography variant="h4" color="primary" className={classes.titlesRight}>Listings</Typography>
+              {/* <Typography variant="h4" color="primary" className={classes.titlesRight}>Listings</Typography> */}
               <div className={classes.listImg}></div>
             </Grid>
           </Grid>
@@ -259,6 +267,7 @@ export default function Services() {
               - Easily edit and delete realtors<br></br>
               - Quicly search a specific realtor in your list<br></br>
               - View all the information about your realtors<br></br>
+              <br></br>
               </Typography>
             </Grid>
           </Grid>

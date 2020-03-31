@@ -72,7 +72,7 @@ export default function HeaderBar() {
     <React.Fragment>
       <CssBaseline />
       <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
-        <Toolbar style={{ marginTop: "3px" }}>
+        <Toolbar style={{ marginTop: "3px", padding: "0" }}>
           <div className={classes.toolbarTitle}>
             <Link variant="button" to="/"><div className={classes.logoLink}></div>
             </Link>

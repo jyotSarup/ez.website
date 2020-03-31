@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles, Grid, Typography } from '@material-ui/core';
 import TeamImg from "./assets/team.jpg";
 import CircularImageCard from "../../Layout/CircularImageCard";
+import LogoTeam from "./assets/LogoTeam.png";
 import { useEffect } from 'react';
 
 const useStyles = makeStyles({
@@ -21,6 +22,15 @@ const useStyles = makeStyles({
         marginBottom: "60px",
         paddingTop: "10vh",
     },
+    teamLogo:{
+        backgroundImage: `url(${LogoTeam})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "contain",
+        textAlign: "center",
+        width: "100%",
+        height: "65px"
+    }
 });
 
 export default function Team() {
@@ -40,14 +50,14 @@ export default function Team() {
         {
             title: "Walter",
             link: "wbgneto",
-            detail: "Lead Developer",
+            detail: "Lead Full Stack Developer",
             info: '"I love to build products, acting strongly in the technical area, which is my specialization, but also in the whole business structure. I am passionate about giving great user experiences to clients."',
             imgThumb: "walter.png"
         },
         {
             title: "Jyot",
             link: "jyotsarupkaur",
-            detail: "Full Stack Developer",
+            detail: "Front-end Developer",
             info: '"I am a web and mobile application developer with 3+ years of industry experience. I am in this industry because I have always had keen interest in critical thinking and analysis. My goal is to keep doing this by developing business solutions."',
             imgThumb: "jyot.png"
         },
@@ -97,7 +107,7 @@ export default function Team() {
             title: "Kuldeeep",
             link: "kuldeep-bhangu",
             detail: "UI Designer",
-            info: '"I am in Web and Mobile App designer stream."',
+            info: '"I have done my bachelor\'s in Computer Applications. I enjoy spending my time on designing and always have a positive and flexible attitude towards others. In this project, my contribution as UX and UI designer."',
             imgThumb: "kuldeep.png"
         },
 
@@ -110,6 +120,7 @@ export default function Team() {
                 <Typography variant="h4">TEAM PARROT</Typography>
                 <Typography variant="subtitle1">The minds behind this project</Typography>
             </div>
+            <div className={classes.teamLogo}></div>
             <Grid
                 container
                 direction="row"
