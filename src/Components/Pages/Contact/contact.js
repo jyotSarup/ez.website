@@ -17,16 +17,15 @@ class Contact extends React.Component {
         }
     }
     message = e => {
-        
+
         //const username = e.target.value;
-        this.setState({ message: "Thank You for your interest" })
+        this.setState({ message: "Thank You for your interest!! We will get in touch with you soon." })
         // this.setState({username:username})
     }
-    // person = e => {
-    //     const username = e.target.value;
-    //     this.setState(() => ({ username }))
-    // }
-
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+    
     render() {
         return (
 
@@ -39,15 +38,15 @@ class Contact extends React.Component {
                     <Typography variant="h4" className="contact_heading">
                         CONTACT US
                 </Typography>
-                    <div className="contact_form">
+                    <form className="contact_form" onSubmit={this.message}>
                         <FormLabel className="contact_label">
                             Name
                     </FormLabel>
-                        <TextField variant="outlined" name="username" className="contact_input" required onChange={this.person}type="text" ></TextField>
+                        <TextField variant="outlined" name="username" className="contact_input" required type="text" ></TextField>
                         <FormLabel className="contact_label">
                             Email
                     </FormLabel>
-                        <TextField variant="outlined" type = "email" className="contact_input" required ></TextField>
+                        <TextField variant="outlined" type="email" className="contact_input" required ></TextField>
                         <FormLabel className="contact_label">
                             Company
                     </FormLabel>
@@ -57,12 +56,14 @@ class Contact extends React.Component {
                     </FormLabel>
                         <TextField variant="outlined" className="contact_input" multiline rowsMax="5" type="text" onBlur="this.value=''"></TextField>
 
-                        <input type="submit" value="Send" className="contact_button" onClick={this.message} />
+                        <button type="submit" value="Send" className="contact_button">Send</button>
+ 
                         <div className="thanks">
-                            {this.state.message}
-                            
+
+                            <h5>{this.state.message}</h5>
+
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <div className="contact_circular_shape">
                     {/* <img src ={CircleImg}/> */}

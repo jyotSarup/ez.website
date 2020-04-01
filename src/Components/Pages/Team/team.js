@@ -72,7 +72,7 @@ export default function Team() {
             title: "Sweera",
             link: "sweerachahal",
             detail: "Front-end Developer",
-            info: '"I am a computer Science engineering graduate who is passionate about creating new things from a scratch."',
+            info: '"I graduated as a Computer Science Engineer and I am passionate about creating new things from a scratch."',
             imgThumb: "sweera.png"
         },
         {
@@ -93,7 +93,7 @@ export default function Team() {
             title: "Kuldeeep",
             link: "kuldeep-bhangu",
             detail: "Designer",
-            info: '"I am in Web and Mobile App designer stream."',
+            info: '"I have done my bachelor’s in Computer Applications. I enjoy spending my time designing and always have a positive and flexible attitude towards others."',
             imgThumb: "kuldeep.png"
         },
 
