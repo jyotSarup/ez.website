@@ -47,7 +47,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#2B879E',
     '&:hover': {
       background: "#34AAC7",
-      color: 'white'
+      color: 'white',
+      border: "none"
     },
     marginLeft: "24px",
     textTransform: "capitalize",
@@ -91,7 +92,7 @@ export default function HeaderBar() {
               Contact
             </Link>
           </nav>
-          <Button href="http://admin.easyrealtysystem.wmdd.ca/" color="primary" variant="outlined" className={classes.button}>
+          <Button href="http://admin.easyrealtysystem.wmdd.ca/" color="primary" variant="contained" className={classes.button}>
             Log in
           </Button>
         </Toolbar>
