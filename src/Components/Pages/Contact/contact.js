@@ -18,9 +18,9 @@ class Contact extends React.Component {
     }
     message = e => {
 
-        //const username = e.target.value;
+        
         this.setState({ message: "Thank You for your interest!! We will get in touch with you soon." })
-        // this.setState({username:username})
+        
     }
     componentDidMount() {
         window.scrollTo(0, 0);
@@ -37,23 +37,23 @@ class Contact extends React.Component {
                 <div className="contact">
                     <Typography variant="h4" className="contact_heading">
                         CONTACT US
-                </Typography>
+                    </Typography>
                     <form className="contact_form" onSubmit={this.message}>
                         <FormLabel className="contact_label">
                             Name
-                    </FormLabel>
+                        </FormLabel>
                         <TextField variant="outlined" name="username" className="contact_input" required type="text" ></TextField>
                         <FormLabel className="contact_label">
                             Email
-                    </FormLabel>
+                        </FormLabel>
                         <TextField variant="outlined" type="email" className="contact_input" required ></TextField>
                         <FormLabel className="contact_label">
                             Company
-                    </FormLabel>
+                        </FormLabel>
                         <TextField variant="outlined" type="text" className="contact_input" required></TextField>
                         <FormLabel className="contact_label">
                             Message
-                    </FormLabel>
+                        </FormLabel>
                         <TextField variant="outlined" className="contact_input" multiline rowsMax="5" type="text" onBlur="this.value=''"></TextField>
 
                         <button type="submit" value="Send" className="contact_button">Send</button>
@@ -66,7 +66,6 @@ class Contact extends React.Component {
                     </form>
                 </div>
                 <div className="contact_circular_shape">
-                    {/* <img src ={CircleImg}/> */}
                 </div>
             </div>
 
@@ -76,3 +75,5 @@ class Contact extends React.Component {
 
 
 export default Contact;
+
+//References: https://material-ui.com/
