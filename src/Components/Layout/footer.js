@@ -101,7 +101,7 @@ export default function Footer() {
                             <Link variant="button" to="/"><div className={classes.logoLink}></div>
                             </Link>
                         </Typography>
-                            &copy; {new Date().getFullYear()} Easy Realty System
+                            <span style={{ fontSize: "16px" }}>&copy; {new Date().getFullYear()} Easy Realty System</span>
                     </Toolbar>
                 </AppBar>
             </div>

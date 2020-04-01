@@ -78,14 +78,14 @@ export default function Team() {
         {
             title: "Harry",
             link: "harryvtran",
-            detail: "Lead Designer",
+            detail: "Lead UI/UX Designer",
             info: '"I graduated with Degree of Information Technology and have experience working in business (Pharmacy, houseware). I enjoy designing and have an open mindset to learn and to contribute to the team."',
             imgThumb: "harry.png"
         },
         {
             title: "Anukampa",
             link: "anukampa-sharma",
-            detail: "Designer",
+            detail: "UI/UX Designer",
             info: '"I had completed my bachelor’s degree in Computer Science & Engineering. Currently I’m pursuing web and mobile application designing Course."',
             imgThumb: "anukampa.png"
         },
