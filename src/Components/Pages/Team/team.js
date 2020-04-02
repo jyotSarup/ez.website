@@ -80,7 +80,7 @@ export default function Team() {
             title: "Kuldeeep",
             link: "kuldeep-bhangu",
             detail: "UI Designer",
-            info: '"I have done my bachelor\'s in Computer Applications. I enjoy spending my time on designing and always have a positive and flexible attitude towards others. In this project, my contribution as UX and UI designer."',
+            info: '"I have done my bachelor’s in Computer Applications. I enjoy spending my time designing and always have a positive and flexible attitude towards others."',
             imgThumb: "kuldeep.png"
         },
 
