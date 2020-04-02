@@ -1,11 +1,7 @@
 import React from 'react';
-
 import Typography from '@material-ui/core/Typography';
 import { FormLabel } from '@material-ui/core';
-import { FormControl } from '@material-ui/core';
 import { TextField } from '@material-ui/core';
-import { Button } from '@material-ui/core';
-import CircleImg from "./assets/Contact_Shape.png";
 
 class Contact extends React.Component {
     constructor(props) {
@@ -17,7 +13,6 @@ class Contact extends React.Component {
         }
     }
     message = e => {
-
         
         this.setState({ message: "Thank You for your interest!! We will get in touch with you soon." })
         
@@ -67,10 +62,11 @@ class Contact extends React.Component {
                 </div>
                 <div className="contact_circular_shape">
                 </div>
-            </div>
+          </div>
+       
 
-        );
-    }
+    );
+}
 }
 
 
