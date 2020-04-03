@@ -1,63 +1,11 @@
+// Imports
 import React from 'react';
-import { Button, Card, CardActions, CardContent, CardHeader, CssBaseline, Grid, Typography, Container, makeStyles } from '@material-ui/core';
-import PricingImg from "./assets/pricing.jpg";
+import { Button, Card, CardActions, CardContent, CardHeader, CssBaseline, Grid, Typography, Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import useStyles from './styles';
 
-const useStyles = makeStyles(theme => ({
-  '@global': {
-    ul: {
-      margin: 0,
-      padding: 0,
-      listStyle: 'none',
-    },
-  },
-  outContainer: {
-    position: "relative",
-    zIndex: "0",
-    paddingBottom: "60px"
-  },
-  cardHeader: {
-    backgroundColor: '#2B879E',
-    color: 'white',
-  },
-  cardPricing: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'baseline',
-    marginTop: "20px",
-    marginBottom: "25px",
-  },
-  wrap: {
-    backgroundImage: `url(${PricingImg})`,
-    height: "32vh",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    position: "relative",
-    textAlign: "center",
-    color: "#fff",
-    padding: "auto",
-    marginBottom: "60px",
-    paddingTop: "10vh",
-  },
-  link: {
-    margin: theme.spacing(1, 3),
-    textDecoration: 'none',
-    color: '#2B879E',
-    fontWeight: "bold",
-    textTransform: "capitalize",
-    display: "block",
-    width: "100%"
-  },
-  descCard: {
-    textAlign: "center",
-    padding: "8px 0px",
-    borderBottom: "1px solid #2B879E",
-    width: "85%",
-    margin: "auto"
-  }
-}));
-
+// Data to be used in main function
 const tiers = [
   {
     title: 'Free Trial',
@@ -66,7 +14,9 @@ const tiers = [
       '5 users included',
       '2 GB of storage',
       'Email support',
-      '1 Email account'],
+      '1 Email account'
+    ],
+    button: "Get Started"
   },
   {
     title: 'Basic',
@@ -78,6 +28,7 @@ const tiers = [
       'Priority email support',
       '10 Email accounts',
     ],
+    button: "Buy Now"
   },
   {
     title: 'Pro',
@@ -88,6 +39,7 @@ const tiers = [
       'Phone & email support',
       '30 Email accounts',
     ],
+    button: "Buy Now"
   },
   {
     title: 'Custom',
@@ -98,12 +50,16 @@ const tiers = [
       'Phone & email support',
       'Unlimited Email',
     ],
+    button: "Contact Us"
   },
 ];
 
-
+// Main function
 export default function Pricing() {
   const classes = useStyles();
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <React.Fragment>
@@ -111,44 +67,35 @@ export default function Pricing() {
       <div className={classes.outContainer}>
         <div className={classes.wrap} >
           <Typography variant="h4">PRICING</Typography>
-          <Typography variant="subtitle1">Plans for all companies <br /> Choose the best for your business</Typography>
+          <Typography variant="subtitle1">Plans for all companies. Choose the best for your business</Typography>
         </div>
-
         <div>
           <Container width="85%" maxWidth="xl" component="main">
             <Grid container spacing={3} alignItems="center">
               {tiers.map(tier => (
                 <Grid item key={tier.title} xs={12} sm={6} md={6} lg={3} xl={3}>
-                  <Card style={{ border: "1px solid #2B879E" }}>
+                  <Card style={{ border: ((tier.title === "Basic") ? "2px solid #34AAC7" : "2px solid #2B879E") }}>
                     <CardHeader
                       title={tier.title}
                       titleTypographyProps={{ align: 'center', variant: "h5" }}
                       className={classes.cardHeader}
-                    />
+                      style={{ backgroundColor: ((tier.title === "Basic") ? '#34AAC7' : '#2B879E') }} />
                     <CardContent>
                       <div className={classes.cardPricing}>
-                        <Typography component="h2" variant="h3" color="textPrimary">
-                          ${tier.price}
-                        </Typography>
-                        <Typography variant="h6" color="textPrimary">
-                          /mo
-                    </Typography>
+                        <Typography component="h2" variant="h3" color="textPrimary">${tier.price}</Typography>
+                        <Typography variant="h6" color="textPrimary">/mo</Typography>
                       </div>
                       <ul>
                         {tier.description.map(line => (
-                          <Typography className={classes.descCard} component="li" variant="body1" align="center" key={line} color="textPrimary">
-                            {line}
-                          </Typography>
+                          <Typography className={classes.descCard} component="li" variant="body2" align="center" key={line} color="textPrimary">{line}</Typography>
                         ))}
                       </ul>
                     </CardContent>
-                      <CardActions>
-                        <Button style={{ width: "175px", margin: "15px auto", border: "1px solid #2B879E" }} color="primary">
-                          <Link variant="button" href="#" className={classes.link} to="/Contact">
-                            Contact Us
-                        </Link>
-                        </Button>
-                      </CardActions>
+                    <CardActions>
+                      <Button className={classes.button}>
+                        <Link variant="button" href="#" className={classes.link} to="/Contact">{tier.button}</Link>
+                      </Button>
+                    </CardActions>
                   </Card>
                 </Grid>
               ))}

@@ -15,9 +15,7 @@ const useStyles = makeStyles(theme => ({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: "2%",
-        paddingLeft: "10%",
-        paddingRight: "10%",
+        padding: "2% 8%",
         backgroundColor: "#2B879E",
         color: "white",
         [theme.breakpoints.down('sm')]: {
@@ -29,10 +27,12 @@ const useStyles = makeStyles(theme => ({
         borderBottom: `1px solid ${theme.palette.divider}`,
         backgroundColor: "#ffffff",
         height: "70px",
-        padding: "0 10%"
-    },
-    toolbarTitle: {
-        flexGrow: 1,
+        width: "85%",
+        '@media (max-width:1200px)': {
+            width: "93%",
+        },
+        margin: "auto",
+        //padding: "0 10%"
     },
     logoLink: {
         backgroundImage: `url(${Logo})`,
@@ -42,6 +42,7 @@ const useStyles = makeStyles(theme => ({
         },
         backgroundRepeat: "no-repeat",
         height: "51px",
+        width: "210px",
     },
     email: {
         [theme.breakpoints.down('sm')]: {
@@ -54,7 +55,7 @@ const useStyles = makeStyles(theme => ({
         height: "40px",
         width: "320px",
         borderRadius: "4px",
-        fontSize: "20px",
+        fontSize: "16px",
         fontStyle: "italic",
         paddingLeft: "10px",
         [theme.breakpoints.down('sm')]: {
@@ -65,6 +66,10 @@ const useStyles = makeStyles(theme => ({
     sendBtn: {
         backgroundColor: "white",
         color: "#2B879E",
+        '&:hover': {
+            background: "#34AAC7",
+            color: 'white'
+        },
         boxShadow: "none",
         padding: "2px 16px",
         border: "none",
@@ -77,6 +82,17 @@ const useStyles = makeStyles(theme => ({
             width: "94px",
             fontSize: "16px"
         },
+    },
+    barFooter: {
+        display: "flex",
+        justifyContent: "space-between",
+        marginTop: "3px",
+        padding: "0",
+    },
+    toolbarTitle: {
+        [theme.breakpoints.down('sm')]: {
+            width: "100px",
+        },
     }
 }));
 
@@ -87,8 +103,8 @@ export default function Footer() {
             <div className={classes.footerWrap}>
                 <div className={classes.newsLetterContent}>
                     <div>
-                        <Typography variant="subtitle1">Subscribe to our newsletter</Typography>
-                        <Typography variant="body1">To get tips about how to be a better manager</Typography>
+                        <Typography variant="h2">Subscribe to our newsletter</Typography>
+                        <Typography variant="body2">To get tips about how to be a better manager</Typography>
                     </div>
                     <div style={{ display: "flex" }} className={classes.email}>
                         <input className={classes.input} type="text" placeholder="Your Email"></input>
@@ -96,12 +112,12 @@ export default function Footer() {
                     </div>
                 </div>
                 <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
-                    <Toolbar style={{ marginTop: "3px", padding: "0" }}>
-                        <Typography noWrap className={classes.toolbarTitle}>
-                            <Link variant="button" to="/"><div className={classes.logoLink}></div>
+                    <Toolbar className={classes.barFooter}>
+                        <div className={classes.toolbarTitle}>
+                            <Link variant="button" to="/" className={classes.logoLink}><div className={classes.logoLink}></div>
                             </Link>
-                        </Typography>
-                            <span style={{ fontSize: "16px" }}>&copy; {new Date().getFullYear()} Easy Realty System</span>
+                        </div>
+                        <div><span style={{ fontSize: "16px" }}>&copy; {new Date().getFullYear()} Easy Realty System</span></div>
                     </Toolbar>
                 </AppBar>
             </div>
