@@ -45,7 +45,7 @@ export default function Team() {
             title: "Saebom",
             link: "saebompak",
             detail: "Front-end Developer",
-            info: '"Familiar with writing HTML5, CSS and front-end development technologies such as jQuery, Bootstrap and have related project experience. I am passionate about mycraft."',
+            info: '"Familiar with writing HTML5, CSS and front-end development technologies such as jQuery, Bootstrap and have related project experience. I am passionate about my craft."',
             imgThumb: "saebom.png"
         },
         {

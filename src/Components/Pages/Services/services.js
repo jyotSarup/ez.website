@@ -29,7 +29,7 @@ export default function Services() {
             </Grid>
             <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Typography variant="body2" color="textPrimary">
-                Find dynamic charts that to analyse your business. Choose to see:<br></br>
+                Find dynamic charts that to analyze your business. Choose to see:<br></br>
                 - Sales by type of property OR<br></br>
                 - Sales by realtor<br></br><br></br>
                 And choose the metrics you want: <br></br>
@@ -65,7 +65,7 @@ export default function Services() {
             <Grid className={classes.description} item xs={12} sm={12} md={12} lg={6} xl={6}>
               <Typography variant="body2" color="textPrimary" style={{ maxWidth: "748px" }}>Manage your listings by exploring this feature:<br></br>
               - Add listings with all characteristics and photos<br></br>
-              - Quiclky assign the listings to a realtor<br></br>
+              - Quickly assign the listings to a realtor<br></br>
               - Manage the status of your listings: active, inactive, sold<br></br>
               - Easily edit and delete your listings<br></br>
               - Add your sales to automatically update your charts<br></br>
