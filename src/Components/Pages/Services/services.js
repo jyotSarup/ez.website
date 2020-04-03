@@ -28,9 +28,9 @@ export default function Services() {
               <div className={classes.dashImg}></div>
             </Grid>
             <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6}>
-              <Typography variant="body2" color="textPrimary" >
-                Find dynamic charts that to analyse your business over time:<br></br><br></br>
-                - Sales by type of property<br></br>
+              <Typography variant="body2" color="textPrimary">
+                Find dynamic charts that to analyse your business. Choose to see:<br></br>
+                - Sales by type of property OR<br></br>
                 - Sales by realtor<br></br><br></br>
                 And choose the metrics you want: <br></br>
                 - Sales by quantity OR<br></br>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Button, CssBaseline, Toolbar, makeStyles } from '@material-ui/core';
-import Logo from "./assets/logo.png";
 import { Link } from 'react-router-dom';
+import Logo from "./assets/ERSLogo.svg";
 
 
 const useStyles = makeStyles(theme => ({
