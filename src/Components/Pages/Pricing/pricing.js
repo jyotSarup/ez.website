@@ -24,7 +24,7 @@ const tiers = [
     price: '25',
     description: [
       '10 users included',
-      '20 GB of storage',
+      '25 GB of storage',
       'Priority email support',
       '10 Email accounts',
     ],
@@ -32,21 +32,21 @@ const tiers = [
   },
   {
     title: 'Pro',
-    price: '50',
+    price: '75',
     description: [
-      '30 users included',
-      '50 GB of storage',
+      'Unlimited users',
+      'Unlimited storage',
       'Phone & email support',
-      '30 Email accounts',
+      'Unlimited Email',
     ],
     button: "Buy Now"
   },
   {
     title: 'Custom',
-    price: '75',
+    price: '',
     description: [
       'Unlimited users',
-      '200 GB of storage',
+      'Unlimited storage',
       'Phone & email support',
       'Unlimited Email',
     ],
@@ -82,8 +82,13 @@ export default function Pricing() {
                       style={{ backgroundColor: ((tier.title === "Basic") ? '#34AAC7' : '#2B879E') }} />
                     <CardContent>
                       <div className={classes.cardPricing}>
-                        <Typography component="h2" variant="h3" color="textPrimary">${tier.price}</Typography>
-                        <Typography variant="h6" color="textPrimary">/mo</Typography>
+                        <Typography
+                        style={{ color: ((tier.title === "Custom") ? 'transparent' : 'black') }} 
+                        component="h2" variant="h3" color="textPrimary">${tier.price}</Typography>
+                        <Typography 
+                        style={{ color: ((tier.title === "Custom") ? 'transparent' : 'black') }} variant="h6" color="textPrimary">/mo</Typography>
+                        <Typography 
+                        style={{ fontWeight: "bold", position: "absolute", marginTop: "22px", display: ((tier.title === "Custom") ? 'block' : 'none') }} variant="h6" color="textPrimary">Ask for a quote</Typography>
                       </div>
                       <ul>
                         {tier.description.map(line => (
