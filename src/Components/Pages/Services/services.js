@@ -29,7 +29,7 @@ export default function Services() {
             </Grid>
             <Grid className={classes.description} item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Typography variant="body2" color="textPrimary">
-                Find dinamic charts that to analyse your business. Choose to see:<br></br>
+                Find dynamic charts that to analyse your business. Choose to see:<br></br>
                 - Sales by type of property OR<br></br>
                 - Sales by realtor<br></br><br></br>
                 And choose the metrics you want: <br></br>

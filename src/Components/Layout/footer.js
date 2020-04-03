@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles, AppBar, Toolbar, Typography } from '@material-ui/core';
-import Logo from "./assets/logo.png";
 import { Link } from 'react-router-dom';
 import LogoMobile from "./assets/logoMobile.png";
+import Logo from "./assets/ERSLogo.svg";
 
 const useStyles = makeStyles(theme => ({
     footerWrap: {
